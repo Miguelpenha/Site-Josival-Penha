@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "https://fonts.googleapis.com/css2? family = Roboto: wght @ 300 & display = swap" rel = "stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>página não encontrada</title>
+    <link rel="icon" href="/img/favicon.ico" />
+    <style>
+        .logo-jp{
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            top: 5%;
+        }
+        body, html{
+            margin: 0;
+            height: 100%;
+        }
+        html{
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: 340%;
+            color: white;
+            background-color: #00AFEF
+        }
+        .msg-404{
+            position: relative;
+            top: 15%;
+        }
+        #load{
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            top: 40%;
+            font-size: 40%;
+        }
+        .bt{
+            background-color: white;
+            border: 14px solid white;
+            border-radius: 4.5px;
+            width: 30%;
+            height: 100%;
+            font-size: 24px;
+        }
+        .bt:hover{
+            opacity: 80%;
+        }
+        .ft:hover{
+            opacity: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div id="load" style="visibility: visible;position: relative;">
+        <img src="img/loadazul.gif">
+        <div style="top: 10%;">paciência</div>
+    </div>
+    <div id="cont" style="visibility: hidden;height: 100%;">
+        <section class="logo-jp">
+            <a href="/img/Logo JP Letra branca - Copia.png" target="_blank">
+                <img src="/img/Logo JP Letra branca - Copia.png" alt="" width="283.125px" height="107.75px" class="ft">
+            </a>
+        </section>
+        <section class="msg-404">
+            <div class="msg" id="msg">Você se perdeu?</div>
+            <br>
+            <div class="msg-voltar" id="msg-voltar">
+                <a href="/" class="bt" style="text-decoration: none;color: black;">Página inicial JP</a>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var estilo = document.getElementById('load');
+            estilo.style.visibility = 'hidden'
+            var estilo2 = document.getElementById('cont')
+            estilo2.style.visibility = 'visible'
+            estilo.style.position = 'fixed'
+        })
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var msg = window.document.getElementById('msg')
+            msg.style.fontSize = '50%'
+            var msg_voltar = window.document.getElementById('msg-voltar')
+            msg_voltar.style.fontSize = '50%'
+        }else{
+
+        }
+    </script>
+</body>
+</html>
