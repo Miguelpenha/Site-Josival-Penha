@@ -11,6 +11,39 @@
         html{
             font-family: 'Roboto', sans-serif;
         }
+        .logo-jp-nav{
+          height: 12vw;
+          width: 40vw;
+        }
+        .ft-principal{
+          width: 100%;
+          position: absolute;
+          right: 0.1vw;
+        }
+        .link-cont{
+          position: absolute;
+          text-decoration: none;
+          color: white;
+          font-size:2.5vw;
+          left: 3vw;
+          top: 43vw;
+          background-color: #FD3535;
+          border: 1.5vw solid #FD3535;
+          border-radius: 1.3vw;
+        }
+        .txt-principal1{
+          position: absolute;
+          color: white;
+          font-size: 5vw;
+          left: 3vw;
+        }
+        .txt-principal2{
+          position: absolute;
+          color: white;
+          font-size: 3vw;
+          left: 3vw;
+          top: 23vw;
+        }
     </style>
 </head>
 <body>
@@ -20,80 +53,17 @@
   <section class="part-prin">
     <img src="/img/imagem-principal-cortada.png" class="ft-principal" id="ft-principal">
     <section>
-      <p class="txt-principal txt-principal1" style="font-size: 2.8vw;" id="txt-principal1">Faça parte da nossa família</p>
-      <p class="txt-principal txt-principal2" style="font-size: 2.2vw;" id="txt-principal2">Conheça e entenda a nossa metodologia <br> educacional e descubra porque o Josival <br> Penha é a melhor opção da região para o <br> seu filho!</p>
-      <a class="link-cont" target="_self" href="https://form.jotform.com/203157184258659" id="link-cont">
+      <p class="txt-principal txt-principal1"id="txt-principal1">Faça parte da nossa família</p>
+      <p class="txt-principal txt-principal2" id="txt-principal2">Conheça e entenda a nossa metodologia <br> educacional e descubra porque o Josival <br> Penha é a melhor opção da região para o <br> seu filho!</p>
+      <a class="link-cont" target="_blank" href="https://form.jotform.com/203157184258659" id="link-cont" rel="external">
         <span class="txt-bt-principal" id="txt-bt-principal">Quero fazer uma visita</span>
       </a>
     </section>
   </section>
-  <footer class="pt-baixo">
-    <a href="https://www.instagram.com/josival.penha/" target="_blank" class="logo-insta logo" id="logo-insta">
-      <img src="img/logo-instagram.svg" class="logo-logo" id="logo-logo-insta">
-      <span class="txt-logo txt-insta" id="txt-insta">Instagram</span>
-    </a>
-    <br>
-    <br>
-    <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/featured" target="_blank" class="logo-you logo" id="logo-you">
-      <img src="img/youtube-symbol_1.svg" class="logo-logo" id="logo-logo-you">
-      <span class="txt-logo txt-you" id="txt-you">Youtube</span>
-    </a>
-    <br>
-    <br>
-    <a href="https://g.page/josival-penha?share" target="_blank" class="logo-maps logo" id="logo-maps">
-      <img src="img/google-maps.svg" class="logo-logo" id="logo-logo-maps">
-      <span class="txt-logo txt-logo-maps" id="txt-maps">Google Maps</span>
-    </a>
-    <br>
-    <br>
-    <a href="mailto:josival.penha@hotmail?subject=Boa%20tarde%20tenho%20uma%20dúvida" target="_blank" class="logo-email logo" id="logo-email">
-      <img src="img/logo-email.svg" class="logo-logo" id="logo-logo-email">
-      <span class="txt-logo txt-logo-email" id="txt-email">E-mail</span>
-    </a>
   </footer>
   <script>
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        var ft_principal = window.document.getElementById('ft-principal')
-        ft_principal.style.height = '120vw'
-        ft_principal.style.width = '100vw'
-        
-        var logo_jp_nav = window.document.getElementById('logo-jp-nav')
-        logo_jp_nav.style.width = '90vw'
-        
-        var txt_principal1 = window.document.getElementById('txt-principal1')
-        var txt_principal2 = window.document.getElementById('txt-principal2')
-        txt_principal1.style.fontSize = '7.6vw'
-        txt_principal2.style.fontSize = '7vw'
-        var link_cont = window.document.getElementById('link-cont')
-        link_cont.style.fontSize = '6.8vw'
-        link_cont.style.width = '75vw'
-        link_cont.style.height = '15vw'
-        var txt_bt_principal = window.document.getElementById('txt-bt-principal')
-        txt_bt_principal.style.left = '1vw'
-        txt_bt_principal.style.top = '3.5vw'
-        link_cont.style.bottom = '20vw'
-        txt_principal2.style.top = '60vw'
-        txt_principal1.style.top = '40vw'
-        txt_principal2.innerHTML = 'Conheça e entenda a nossa metodologia educacional e descubra porque o Josival Penha é a melhor opção da região para o seu filho!'
-        txt_principal1.style.left = '2vw'
-        txt_principal2.style.left = '4vw'
-        link_cont.style.left = '10vw'
-        var logo_insta = window.document.getElementById('logo-insta')
-        logo_insta.style.top = '80vw'
-        var logo_you = window.document.getElementById('logo-you')
-        logo_you.style.top = '100vw'
-        var logo_maps = window.document.getElementById('logo-maps')
-        logo_maps.style.top = '120vw'
-        var logo_email = window.document.getElementById('logo-email')
-        logo_email.style.top = '140vw'
-        var logo_logo_insta = window.document.getElementById('logo-logo-insta')
-        logo_logo_insta.style.width = '20vw'
-        var logo_logo_you = window.document.getElementById('logo-logo-you')
-        logo_logo_you.style.width = '20vw'
-        var logo_logo_maps = window.document.getElementById('logo-logo-maps')
-        logo_logo_maps.style.width = '20vw'
-        var logo_logo_email = window.document.getElementById('logo-logo-email')
-        logo_logo_email.style.width = '20vw'
+
       }else{
         
       }
