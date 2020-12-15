@@ -11,7 +11,6 @@
     <style>
         html{
             font-family: 'Roboto', sans-serif;
-            height: 200%;
         }
         .logo-jp-nav{
           height: 8vw;
@@ -84,11 +83,14 @@
         }
         .mapa{
           position: absolute;
-          top: 60vw;
         }
         .mapa-in{
-          width: 400%;
-          height: 400%;
+          position: absolute;
+          width: 40vw;
+          height: 30vw;
+          top: 50vw;
+          left: 1.5vw;
+          padding-bottom: 1vw;
         }
     </style>
 </head>
@@ -151,7 +153,9 @@
         logo_tel.style.top = '2vw'
         logo_tel.style.width = '5vw'
         logo_tel.style.right = '27vw'
-        var logo_tel_txt = window.document.getElementById('logo-tel-txt')
+        var mapa_in = window.document.getElementById('mapa-in')
+        mapa_in.style.top = '100vw'
+        mapa_in.style.width = '40vw'
       }else{
         var logo_jp_nav = window.document.getElementById('logo-jp-nav')
         logo_jp_nav.style.marginLeft = '1vw'
