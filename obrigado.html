@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JP</title>
+    <title>Obrigado!</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <style>
         html{
             background-color: #00AFEF;
@@ -19,9 +20,6 @@
             margin-left: auto;
             margin-right: auto;
             top: 2%;
-        }
-        .ft:hover{
-            opacity: 80%;
         }
         .bt{
             background-color: white;
@@ -39,33 +37,18 @@
     </style>
 </head>
 <body>
-    <div id="load" style="visibility: visible;position: relative;">
-        <img src="img/loadazul.gif">
-        <div style="top: 10%;">paciência</div>
-    </div>
-<div id="cont" style="visibility: hidden;height: 100%;">
-
-    <a href="/img/Logo JP Letra branca - Copia.png" target="_blank">
-        <img src="/img/Logo JP Letra branca - Copia.png" alt="" width="283.125px" height="107.75px" class="ft">
-    </a>
-    <br>
-    Obrigado por Preencher o Nosso Formulário!
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="msg-voltar" id="msg-voltar">
-        <a href="/" class="bt" style="text-decoration: none;color: black;">Página inicial JP</a>
-    </div>
+"    <img src="/img/Logo JP Letra branca - Copia.png" alt="" width="283.125px" height="107.75px" class="ft">
+<br>
+Obrigado por Preencher o Nosso Formulário!
+<br>
+<br>
+<br>
+<br>
+<div class="msg-voltar" id="msg-voltar">
+    <a href="/" class="bt" style="text-decoration: none;color: black;">Voltar a página inicial</a>
+</div>"
 </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            var estilo = document.getElementById('load');
-            estilo.style.visibility = 'hidden'
-            var estilo2 = document.getElementById('cont')
-            estilo2.style.visibility = 'visible'
-            estilo.style.position = 'fixed'
-        })
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             var msg = window.document.getElementById('msg')
             msg.style.fontSize = '50%'
