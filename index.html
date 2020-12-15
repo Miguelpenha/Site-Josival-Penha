@@ -11,11 +11,11 @@
     <style>
         html{
             font-family: 'Roboto', sans-serif;
-            height: 70vw;
+            height: 200%;
         }
         .logo-jp-nav{
-          height: 10vw;
-          width: 34vw;
+          height: 8vw;
+          width: 28vw;
           margin-top: 1vw;
           margin-bottom: 1vw;
         }
@@ -34,7 +34,12 @@
           top: 40vw;
           background-color: #FD3535;
           border: 1.7vw solid #FD3535;
-          border-radius: 1.3vw;
+          border-radius: 1.7vw;
+        }
+        .link-cont:hover{
+          background-color: #fc2424;
+          border: 1.7vw solid #fc2424;
+          color: white;
         }
         .txt-principal1{
           position: absolute;
@@ -47,21 +52,53 @@
         .txt-principal2{
           position: absolute;
           color: white;
-          font-size: 3vw;
+          font-size: 3.3vw;
           font-weight: 300;
           left: 3%;
-          top: 19vw;
+          top: 18vw;
         }
-        .link-cont:hover{
-          background-color: #fc2424;
-          border: 1.7vw solid #fc2424;
-          color: white;
+        .tel-link{
+          position: absolute;
+          text-decoration: none;
+          color: rgb(128, 128, 128);
+          font-size: 2vw;
+          font-weight: 500;
+          top: 3.3vw;
+          right: 0vw;
+          width: 20vw;
+        }
+        .tel-link:hover{
+          color: rgb(128, 128, 128);
+        }
+        .logo-tel-txt{
+          position: absolute;
+          left: 3vw;
+        }
+        .logo-tel{
+          width: 2.5vw;
+          -webkit-transform: rotate(10deg);
+          -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+          position: absolute;
+          top: 0.5vw;
+        }
+        .mapa{
+          position: absolute;
+          top: 60vw;
+        }
+        .mapa-in{
+          width: 400%;
+          height: 400%;
         }
     </style>
 </head>
 <body>
   <nav class="nav-principal">
     <img src="img/LOGO JP PARA O SITE.png" class="logo-jp-nav" id="logo-jp-nav">
+    <a class="tel-link" id="tel-link" href="tel:34372618">
+      <img src="img/logo-tel.png" alt="Logo Telefone" class="logo-tel" id="logo-tel">
+      <div class="logo-tel-txt" id="logo-tel-txt">(81) 3437-2618</div>
+    </a>
   </nav>
   <section class="part-prin">
     <img src="img/imagem-principal-cortada.png" class="ft-principal" id="ft-principal">
@@ -73,31 +110,48 @@
       </a>
     </section>
   </section>
-  </footer>
+  <section class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15805.506002261029!2d-34.8903736!3d-7.959987!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca9e00ab24b90cff!2sInstituto%20Educacional%20Josival%20Penha!5e0!3m2!1spt-BR!2sbr!4v1608028181239!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa-in" id="mapa-in"></iframe>
+  </section>
   <script>
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<=740){
         var ft_principal = window.document.getElementById('ft-principal')
         ft_principal.style.width = '200%'
         var txt_principal_1 = window.document.getElementById('txt-principal1')
-        txt_principal_1.style.fontSize = '7vw'
+        txt_principal_1.style.fontSize = '6vw'
         txt_principal_1.style.top = '30vw'
         var txt_principal_2 = window.document.getElementById('txt-principal2')
-        txt_principal_2.style.fontSize = '5.8vw'
+        txt_principal_2.style.fontSize = '5vw'
         txt_principal_2.style.fontWeight = '400'
         txt_principal_2.style.top = '40vw'
         txt_principal_2.innerHTML = 'conheça e entenda a nossa metodologia educacional e descubra porque o Josival Penha é a melhor opção da região para o seu filho!'
         var link_cont = window.document.getElementById('link-cont')
-        link_cont.style.fontSize = '6vw'
+        link_cont.style.fontSize = '5vw'
         link_cont.style.top = '90vw'
         link_cont.style.fontWeight = '400'
         var logo_jp_nav = window.document.getElementById('logo-jp-nav')
         logo_jp_nav.style.height = '20vw'
         logo_jp_nav.style.width = '70vw'
         logo_jp_nav.style.marginTop = '3vw'
-        logo_jp_nav.style.marginBottom = '3vw'
+        logo_jp_nav.style.marginBottom = '10vw'
         logo_jp_nav.style.display = 'block'
         logo_jp_nav.style.marginRight = 'auto'
         logo_jp_nav.style.marginLeft = 'auto'
+        var tel_link = window.document.getElementById('tel-link')
+        tel_link.style.top = '26vw'
+        tel_link.style.fontSize = '4vw'
+        tel_link.style.left = '20vw'
+        tel_link.style.width = '30vw'
+        tel_link.style.marginLeft = 'auto'
+        tel_link.style.marginRight = 'auto'
+        tel_link.style.marginLeft = '15vw'
+        tel_link.style.top = '23vw'
+        var logo_tel = window.document.getElementById('logo-tel')
+        logo_tel.style.position = 'absolute'
+        logo_tel.style.top = '2vw'
+        logo_tel.style.width = '5vw'
+        logo_tel.style.right = '27vw'
+        var logo_tel_txt = window.document.getElementById('logo-tel-txt')
       }else{
         var logo_jp_nav = window.document.getElementById('logo-jp-nav')
         logo_jp_nav.style.marginLeft = '1vw'
