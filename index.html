@@ -76,6 +76,9 @@
           position: absolute;
           left: 3vw;
         }
+        .logo-tel-txt:hover{
+          color: #666666;
+        }
         .logo-tel{
           width: 2.5vw;
           -webkit-transform: rotate(10deg);
@@ -94,13 +97,35 @@
           top: 50vw;
           left: 1.5vw;
         }
+        .pt-baixo{
+          position: absolute;
+          top: 100vw;
+          padding-bottom: 12vw;
+        }
+        .link-rs{
+          text-decoration: none;
+        }
+        .logo-rs{
+          width: 3.2vw;
+        }
+        .rs{
+          padding-top: 2vw;
+        }
+        .txt-rs{
+          font-size: 2vw;
+          width: 31vw;
+          color: #009CDE;
+        }
+        .txt-rs:hover{
+          color: #0d6efd;
+        }
     </style>
 </head>
 <body>
   <nav class="nav-principal">
     <img src="img/Logo Josival Penha.png" class="logo-jp-nav" id="logo-jp-nav" alt="Logo Josival Penha">
     <a class="tel-link" id="tel-link" href="tel:34372618" rel="external">
-      <img src="img/Logo telefone.png" alt="Logo Telefone" class="logo-tel" id="logo-tel">
+      <img src="img/Logo telefone.png" alt="Número Josival Penha" class="logo-tel" id="logo-tel">
       <div class="logo-tel-txt" id="logo-tel-txt">(81) 3437-2618</div>
     </a>
   </nav>
@@ -122,22 +147,28 @@
     style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa-in" id="mapa-in"></iframe>
   </section>
   <footer class="pt-baixo" id="pt-baixo">
-    <div class="insta" id="insta">
-      <img src="img/Logo Instagram.png" alt="Logo Instagram" class="logo-insta" id="logo-insta">
-      <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-yt" id="link-yt">
-        <span class="txt-insta" id="txt-insta"></span>
+    <div class="insta rs" id="insta">
+      <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-insta link-rs" id="link-insta" target="_blank">
+        <img src="img/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta">
+        <span class="txt-insta txt-rs" id="txt-insta">@josival.penha</span>
       </a>
     </div>
-    <div class="yt" id="yt">
-      <img src="img/Logo Youtube.png" alt="Logo Youtube" class="logo-yt" id="logo-yt">
-      <a href="" rel="external" class="link-yt" id="link-yt">
-        <span class="txt-yt" id="txt-yt"></span>
+    <div class="yt rs" id="yt">
+      <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/about" rel="external" class="link-yt link-rs" id="link-yt" target="_blank">
+        <img src="img/Logo Youtube.png" alt="Youtube Josival Penha" class="logo-yt logo-rs" id="logo-yt">
+        <span class="txt-yt txt-rs" id="txt-yt">Inst. Educacional Josival Penha</span>
       </a>
     </div>
-    <div class="gg-maps" id="gg-maps">
-      <img src="img/Logo Google Maps.png" alt="Logo Google Maps" class="logo-gg-maps" id="logo-gg-maps">
-      <a href="" rel="external" class="link-gg-maps" id="link-gg-maps">
-        <span class="txt-gg-maps" id="txt-gg-maps"></span>
+    <div class="gg-maps rs" id="gg-maps">
+      <a href="https://goo.gl/maps/dM31qyiR22TeQshZ8" rel="external" class="link-gg-maps link-rs" id="link-gg-maps" target="_blank">
+        <img src="img/Logo Google Maps.png" alt="Google Mapa Josival Penha" class="logo-gg-maps logo-rs" id="logo-gg-maps">
+        <span class="txt-gg-maps txt-rs" id="txt-gg-maps">Instituto Educacional Josival Penha - Avenida João Paulo II - Mirueira, Paulista - PE</span>
+      </a>
+    </div>
+    <div class="whats rs" id="whats">
+      <a href="https://api.whatsapp.com/send?phone=5555819949975&text=Boa%20tarde%2C%20gostaria%20de%20falar%20com%20a%20diretora-" rel="external" class="link-whats link-rs" id="link-whats" target="_blank">
+        <img src="img/Logo Whatsapp.png" alt="Whatsapp Josival Penha" class="logo-whats logo-rs" id="logo-whats">
+        <span class="txt-whats txt-rs" id="txt-whats">(81) 99499-7501</span>
       </a>
     </div>
   </footer>
