@@ -40,7 +40,7 @@
           border-radius: 1.2vw;
         }
         .link-cont:hover{
-          opacity: 80%;
+          opacity: 85%;
           color: white;
         }
         .txt-principal1{
@@ -89,17 +89,18 @@
         }
         .mapa{
           position: absolute;
+          width: 100%;
         }
         .mapa-in{
           position: absolute;
-          width: 40vw;
-          height: 25vw;
-          top: 35vw;
-          left: 5vw;
+          width: 100%;
+          height: 34.2vw;
+          top: 30vw;
+
         }
         .pt-baixo{
           position: absolute;
-          top: 100vw;
+          top: 115vw;
           padding-bottom: 12vw;
           background-color: rgb(209, 209, 209);
           width: 100%;
@@ -144,6 +145,122 @@
           position: absolute;
           left: 57vw;
         }
+        .dp{
+          position: absolute;
+          top: 70vw;
+          background-color: rgb(233, 233, 233);
+          width: 100%;
+          height: 100%;
+        }
+        .c-dp{
+          top: 3vw;
+          border: 0.1vw solid rgb(211, 211, 211);
+          height: 39.0625vw;
+          width: 45.572916666666664vw;
+          background-color: #039DDE;
+          border-radius: 2vw;
+        }
+        .c-dp-1{
+          position: absolute;
+          left: 1vw;
+        }
+        .img-c-dp-pais{
+          border-radius: 50%;
+          width: 16.666666666666668vw;
+          position: absolute;
+          left: 1vw;
+          top: 1vw;
+          transition-duration: 0.1s;
+          transition-timing-function: linear;
+        }
+        .txt-tit-pais{
+          position: absolute;
+          top: 7vw;
+          font-size: 2.5vw;
+          font-weight: 700;
+          color: white;
+          left: 19vw;
+        }
+        .txt-sub-pais{
+          position: absolute;
+          top: 10.5vw;
+          left: 19.1vw;
+          color: white;
+          font-size: 1.5vw;
+          width: 20vw;
+        }
+        .txt-sub-pais-st{
+          font-weight: 500;
+        }
+        .txt-desc-pais{
+          position: absolute;
+          color: white;
+          top: 14vw;
+          left: 19.2vw;
+          font-size: 1.2vw;
+        }
+        .img-c-dp-alunos{
+          border-radius: 50%;
+          width: 8.333333333333334vw;
+          position: absolute;
+          left: 0.7vw;
+          top: 25vw;
+          transition-duration: 0.1s;
+          transition-timing-function: linear;
+        }
+        .img-c-dp-alunos:hover{
+          border-radius: 25%;
+        }
+        .img-c-dp-pais:hover{
+          border-radius: 25%;
+        }
+        .txt-sub-alunos-st{
+          font-weight: 500;
+        }
+        .txt-tit-alunos{
+          position: absolute;
+          top: 27vw;
+          font-size: 1.8vw;
+          font-weight: 700;
+          color: white;
+          left: 10vw;
+        }
+        .txt-sub-alunos{
+          position: absolute;
+          top: 29.3vw;
+          color: white;
+          width: 30vw;
+          left: 10.1vw;
+          font-size: 1.5vw;
+        }
+        .txt-desc-alunos{
+          color: white;
+          position: absolute;
+          top: 32vw;
+          font-size: 0.9vw;
+          left: 10.1vw;
+          transition-duration: 0.1s;
+          transition-timing-function: linear;
+          
+        }
+        .txt-desc-alunos:hover{
+          font-size: 1.5vw;
+        }
+        .txt-desc-pais:hover{
+          font-size: 1.7vw;
+        }
+        .c-dp-2{
+          position: absolute;
+          left: 52vw;
+        }
+        .c-dp-2{
+          position: absolute;
+          left: 50vw;
+        }
+        .c-dp-1{
+          position: absolute;
+          left: 2.5vw;
+        }
     </style>
 </head>
 <body>
@@ -176,12 +293,51 @@
     val%20Penha!5e0!3m2!1spt-BR!2sbr!4v1608060148378!5m2!1spt-BR!2sbr" frameborder="0" 
     style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa-in" id="mapa-in"></iframe>
   </section>
+  <section class="dp" id="dp">
+    <div class="c-dp c-dp-1" id="c-dp c-dp-1">
+      <img src="img/dp/Pais/Fernanda Sales.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
+      <span class="txt-tit-pais" id="txt-tit-pais">Fernanda Sales</span>
+      <span class="txt-sub-pais" id="txt-sub-pais">
+        Mãe do <span class="txt-sub-pais-st" id="txt-sub-pais-st">Caio Sales</span>
+      </span>
+      <span class="txt-desc-pais" id="txt-desc-pais1" onmouseover="txtPaHo1()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+      </span>
+      <img src="img/dp/Alunos/Caio Sales.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
+      <span class="txt-tit-alunos" id="txt-tit-alunos">Caio Sales</span>
+      <span class="txt-sub-alunos" id="txt-sub-alunos">
+        Aluno do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 3</span>
+      </span>
+      <span class="txt-desc-alunos" id="txt-desc-alunos1" onmouseover="txtAluHo1()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+      </span>
+    </div>
+    <div class="c-dp c-dp-2" id="c-dp c-dp-2">
+      <img src="img/dp/Pais/Lisandra Carla.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
+      <span class="txt-tit-pais" id="txt-tit-pais">Lisandra Carla</span>
+      <span class="txt-sub-pais" id="txt-sub-pais">
+        Mãe da <span class="txt-sub-pais-st" id="txt-sub-pais-st">Lisa Carla</span>
+      </span>
+      <span class="txt-desc-pais" id="txt-desc-pais2" onmouseover="txtPaHo2()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+      </span>
+      <img src="img/dp/Alunos/Lisa Carla.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
+      <span class="txt-tit-alunos" id="txt-tit-alunos">Lisa Carla</span>
+      <span class="txt-sub-alunos" id="txt-sub-alunos">
+        Aluna do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 4</span>
+      </span>
+      <span class="txt-desc-alunos" id="txt-desc-alunos2" onmouseover="txtAluHo2()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+      </span>
+    </div>
+  </section>
   <footer class="pt-baixo" id="pt-baixo">
     <div class="insta rs" id="insta">
       <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-insta link-rs" id="link-insta" target="_blank">
         <img src="img/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta">
         <span class="txt-insta txt-rs" id="txt-insta">@josival.penha</span>
       </a>
+
     </div>
     <div class="yt rs" id="yt">
       <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/about" rel="external" class="link-yt link-rs" id="link-yt" target="_blank">
@@ -203,6 +359,30 @@
     </div>
   </footer>
   <script>
+      function txtPaHo1() {
+        var txt = window.document.getElementById('txt-desc-pais1')
+        txt.style.transitionDuration = '0.3s'
+        txt.style.transitionTimingFunction = 'linear'
+        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
+      }
+      function txtPaHo2() {
+        var txt = window.document.getElementById('txt-desc-pais2')
+        txt.style.transitionDuration = '0.3s'
+        txt.style.transitionTimingFunction = 'linear'
+        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
+      }
+      function txtAluHo1() {
+        var txt = window.document.getElementById('txt-desc-alunos1')
+        txt.style.transitionDuration = '0.3s'
+        txt.style.transitionTimingFunction = 'linear'
+        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
+      }
+      function txtAluHo2() {
+        var txt = window.document.getElementById('txt-desc-alunos2')
+        txt.style.transitionDuration = '0.3s'
+        txt.style.transitionTimingFunction = 'linear'
+        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
+      }
       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<=740){
         var ft_principal = window.document.getElementById('ft-principal')
         ft_principal.style.width = '200%'
@@ -302,8 +482,8 @@
         txt_mapa.style.position = 'absolute'
         txt_mapa.style.fontSize = '1vw'
         txt_mapa.style.width = '20vw'
-        txt_mapa.style.top = '32.5vw'
-        txt_mapa.style.left = '5vw'
+        txt_mapa.style.top = '28vw'
+        txt_mapa.style.left = '2vw'
       }
   </script>
 </body>
