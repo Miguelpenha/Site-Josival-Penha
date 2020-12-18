@@ -1,8 +1,8 @@
 ErrorDocument 404 /404.html
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www.josivalpenha.site [NC]
-RewriteRule ^(.*)$  [L,R=301]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^josivalpenha.site [NC]
+RewriteRule ^(.*)$ https://www.josivalpenha.site/$1 [L,R=301]
 
 RewriteEngine On 
 RewriteCond %{SERVER_PORT} 80 
