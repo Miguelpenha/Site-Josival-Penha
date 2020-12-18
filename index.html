@@ -87,6 +87,10 @@
           position: absolute;
           top: 0.5vw;
         }
+        .tel-link1{
+          position: absolute;
+          left: 57vw;
+        }
         .mapa{
           position: absolute;
           width: 100%;
@@ -100,7 +104,7 @@
         }
         .pt-baixo{
           position: absolute;
-          top: 120vw;
+          top: 121vw;
           padding-bottom: 12vw;
           background-color: rgb(209, 209, 209);
           width: 100%;
@@ -113,37 +117,7 @@
         }
         .rs{
           padding-top: 2vw;
-          padding-left: 0.3vw;
-        }
-        .txt-rs{
-          font-size: 2vw;
-          width: 31vw;
-          color: #009CDE;
-          position: absolute;
-          padding-left: 0.7vw;
-        }
-        .txt-rs:hover{
-          color: #0d6efd;
-        }
-        .txt-insta{
-          position: absolute;
-          width: 14vw;
-        }
-        .txt-yt{
-          position: absolute;
-          width: 27.5vw;
-        }
-        .txt-gg-maps{
-          position: absolute;
-          width: 73vw;
-        }
-        .txt-whats{ 
-          position: absolute;
-          width: 15.2vw;
-        }
-        .tel-link1{
-          position: absolute;
-          left: 57vw;
+          padding-left: 0.5vw;
         }
         .dp{
           position: absolute;
@@ -180,6 +154,11 @@
           font-weight: 700;
           color: white;
           left: 19vw;
+          text-decoration: none;
+        }
+        .txt-tit-pais:hover{
+          color: white;
+          text-decoration: underline;
         }
         .txt-sub-pais{
           position: absolute;
@@ -275,10 +254,27 @@
         }
         .bt-dp:hover{
           color: white;
-          font-size: 1.7vw;
+          font-size: 2vw;
           border: 1.7vw solid #039DDE;
           border-left: 9.8vw solid #039DDE;
-          left: 27vw;
+          left: 22vw;
+          position: absolute;
+        }
+        .logo-msg{
+          position: absolute;
+          visibility: hidden;
+        }
+        .logo-msg:hover{
+          text-decoration: underline;
+          color: #039DDE;
+        }
+        .logo-msg2{
+          position: absolute;
+          height: 3.9vw;
+          width: 10vw;
+          bottom: 27.3vw;
+          left: 3.7vw;
+          background-color: yellow;
         }
     </style>
 </head>
@@ -316,7 +312,7 @@
   <section class="dp" id="dp">
     <div class="c-dp c-dp-1" id="c-dp c-dp-1">
       <img src="img/dp/Pais/Fernanda Sales.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
-      <span class="txt-tit-pais" id="txt-tit-pais">Fernanda Sales</span>
+      <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Fernanda Sales</a>
       <span class="txt-sub-pais" id="txt-sub-pais">
         Mãe do <span class="txt-sub-pais-st" id="txt-sub-pais-st">Caio Sales</span>
       </span>
@@ -334,7 +330,7 @@
     </div>
     <div class="c-dp c-dp-2" id="c-dp c-dp-2">
       <img src="img/dp/Pais/Lisandra Carla.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
-      <span class="txt-tit-pais" id="txt-tit-pais">Lisandra Carla</span>
+      <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Lisandra Carla</a>
       <span class="txt-sub-pais" id="txt-sub-pais">
         Mãe da <span class="txt-sub-pais-st" id="txt-sub-pais-st">Lisa Carla</span>
       </span>
@@ -356,32 +352,120 @@
   </section>
   <footer class="pt-baixo" id="pt-baixo">
     <div class="insta rs" id="insta">
-      <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-insta link-rs" id="link-insta" target="_blank">
-        <img src="img/Logos/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta">
-        <span class="txt-insta txt-rs" id="txt-insta">@josival.penha</span>
+      <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-insta link-rs" id="link-insta" target="_blank" onmouseout="insta2()">
+        <img src="img/Logos/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta" onmouseover="insta()">
+        <div class="logo-insta-msg logo-msg" id="logo-insta-msg">
+          @josival.penha
+        </div>
       </a>
-
     </div>
     <div class="yt rs" id="yt">
-      <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/about" rel="external" class="link-yt link-rs" id="link-yt" target="_blank">
-        <img src="img/Logos/Logo Youtube.png" alt="Youtube Josival Penha" class="logo-yt logo-rs" id="logo-yt">
-        <span class="txt-yt txt-rs" id="txt-yt">Inst. Educacional Josival Penha</span>
+      <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/about" rel="external" class="link-yt link-rs" id="link-yt" target="_blank" onmouseout="yt2()">
+        <img src="img/Logos/Logo Youtube.png" alt="Youtube Josival Penha" class="logo-yt logo-rs" id="logo-yt" onmouseover="yt()">
+        <div class="logo-yt-msg logo-msg" id="logo-yt-msg">
+          Inst. Educacional Josival Penha
+        </div>
       </a>
     </div>
     <div class="gg-maps rs" id="gg-maps">
-      <a href="https://goo.gl/maps/dM31qyiR22TeQshZ8" rel="external" class="link-gg-maps link-rs" id="link-gg-maps" target="_blank">
-        <img src="img/Logos/Logo Google Maps.png" alt="Google Mapa Josival Penha" class="logo-gg-maps logo-rs" id="logo-gg-maps">
-        <span class="txt-gg-maps txt-rs" id="txt-gg-maps">Instituto Educacional Josival Penha - Avenida João Paulo II - Mirueira, Paulista - PE</span>
+      <a href="https://goo.gl/maps/dM31qyiR22TeQshZ8" rel="external" class="link-gg-maps link-rs" id="link-gg-maps" target="_blank" onmouseout="ggMaps2()">
+        <img src="img/Logos/Logo Google Maps.png" alt="Google Mapa Josival Penha" class="logo-gg-maps logo-rs" id="logo-gg-maps" onmouseover="ggMaps()">
+        <div class="logo-gg-maps-msg logo-msg" id="logo-gg-maps-msg">
+          Instituto Educacional Josival Penha Av. João Paulo II, 878-880 - Mirueira, Paulista - PE, 53405-190
+        </div>
       </a>
     </div>
     <div class="whats rs" id="whats">
-      <a href="https://api.whatsapp.com/send?phone=5555819949975&text=Boa%20tarde%2C%20gostaria%20de%20falar%20com%20a%20diretora-" rel="external" class="link-whats link-rs" id="link-whats" target="_blank">
-        <img src="img/Logos/Logo Whatsapp.png" alt="Whatsapp Josival Penha" class="logo-whats logo-rs" id="logo-whats">
-        <span class="txt-whats txt-rs" id="txt-whats">(81) 99499-7501</span>
+      <a href="https://api.whatsapp.com/send?phone=5555819949975&text=Boa%20tarde%2C%20gostaria%20de%20falar%20com%20a%20diretora-" rel="external" class="link-whats link-rs" id="link-whats" target="_blank" onmouseout="whats2()">
+        <img src="img/Logos/Logo Whatsapp.png" alt="Whatsapp Josival Penha" class="logo-whats logo-rs" id="logo-whats" onmouseover="whats()">
+        <div class="logo-whats-msg logo-msg" id="logo-whats-msg">
+          (81) 99499-7501
+        </div>
       </a>
     </div>
   </footer>
   <script>
+      function insta2() {
+        var logo = window.document.getElementById('logo-insta-msg')
+        logo.style.visibility = 'hidden'
+      }
+      function insta() {
+        var logo = window.document.getElementById('logo-insta-msg')
+        logo.style.position = 'absolute'
+        logo.style.left = '4vw'
+        logo.style.backgroundColor = 'white'
+        logo.style.border = '0.7vw solid white'
+        logo.style.borderTopLeftRadius = '5vw'
+        logo.style.borderBottomLeftRadius = '5vw'
+        logo.style.borderTopRightRadius = '5vw'
+        logo.style.borderBottomRightRadius = '5vw'
+        logo.style.fontSize = '1.3vw'
+        logo.style.textDecoration = 'none'
+        logo.style.color = '#039DDE'
+        logo.style.visibility = 'visible'
+        logo.style.top = '2.2vw'
+      }
+      function yt2() {
+        var logo = window.document.getElementById('logo-yt-msg')
+        logo.style.visibility = 'hidden'
+      }
+      function yt() {
+        var logo = window.document.getElementById('logo-yt-msg')
+        logo.style.position = 'absolute'
+        logo.style.left = '4vw'
+        logo.style.backgroundColor = 'white'
+        logo.style.border = '0.7vw solid white'
+        logo.style.borderTopLeftRadius = '5vw'
+        logo.style.borderBottomLeftRadius = '5vw'
+        logo.style.borderTopRightRadius = '5vw'
+        logo.style.borderBottomRightRadius = '5vw'
+        logo.style.fontSize = '1.3vw'
+        logo.style.textDecoration = 'none'
+        logo.style.color = '#039DDE'
+        logo.style.visibility = 'visible'
+        logo.style.top = '7.5vw'
+      }
+      function ggMaps() {
+        var logo = window.document.getElementById('logo-gg-maps-msg')
+        logo.style.position = 'absolute'
+        logo.style.left = '4vw'
+        logo.style.backgroundColor = 'white'
+        logo.style.border = '0.7vw solid white'
+        logo.style.borderTopLeftRadius = '5vw'
+        logo.style.borderBottomLeftRadius = '5vw'
+        logo.style.borderTopRightRadius = '5vw'
+        logo.style.borderBottomRightRadius = '5vw'
+        logo.style.fontSize = '1.3vw'
+        logo.style.textDecoration = 'none'
+        logo.style.color = '#039DDE'
+        logo.style.visibility = 'visible'
+        logo.style.top = '12.7vw'
+      }
+      function ggMaps2() {
+        var logo = window.document.getElementById('logo-gg-maps-msg')
+        logo.style.visibility = 'hidden'
+      }
+      function whats2() {
+        var logo = window.document.getElementById('logo-whats-msg')
+        logo.style.visibility = 'hidden'
+      }
+      function whats() {
+        var logo = window.document.getElementById('logo-whats-msg')
+        logo.style.position = 'absolute'
+        logo.style.left = '4vw'
+        logo.style.backgroundColor = 'white'
+        logo.style.border = '0.7vw solid white'
+        logo.style.borderTopLeftRadius = '5vw'
+        logo.style.borderBottomLeftRadius = '5vw'
+        logo.style.borderTopRightRadius = '5vw'
+        logo.style.borderBottomRightRadius = '5vw'
+        logo.style.borderBottomLeftRadius = '5vw'
+        logo.style.fontSize = '1.3vw'
+        logo.style.textDecoration = 'none'
+        logo.style.color = '#039DDE'
+        logo.style.visibility = 'visible'
+        logo.style.top = '17.8vw'
+      }
       function btDp2() {
         var txt = window.document.getElementById('txt-bt-dp')
         txt.style.marginRight = '0vw'
