@@ -1,7 +1,7 @@
 ErrorDocument 404 /404.html
 
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^josivalpenha.site [NC]
+RewriteCond %{HTTP_HOST} ^site-jp.vercel.app [NC]
 RewriteRule ^(.*)$  [L,R=301]
 
 RewriteEngine On 
