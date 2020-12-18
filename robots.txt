@@ -2,3 +2,5 @@ sitemap: https://josivalpenha.site/sitemap.xml
 User-agent: *
 Disallow: /obrigado.html
 Disallow: /404.hmtl
+Disallow: /README.md
+Disallow: /LICENSE
