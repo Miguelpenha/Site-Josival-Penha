@@ -100,7 +100,7 @@
         }
         .pt-baixo{
           position: absolute;
-          top: 115vw;
+          top: 120vw;
           padding-bottom: 12vw;
           background-color: rgb(209, 209, 209);
           width: 100%;
@@ -150,7 +150,7 @@
           top: 70vw;
           background-color: rgb(233, 233, 233);
           width: 100%;
-          height: 100%;
+          height: 130%;
         }
         .c-dp{
           top: 3vw;
@@ -241,7 +241,6 @@
           left: 10.1vw;
           transition-duration: 0.1s;
           transition-timing-function: linear;
-          
         }
         .txt-desc-alunos:hover{
           font-size: 1.5vw;
@@ -261,20 +260,41 @@
           position: absolute;
           left: 2.5vw;
         }
+        .bt-dp{
+          text-decoration: none;
+          position: absolute;
+          top: 43.5vw;
+          left: 32vw;
+          font-size: 2vw;
+          background-color: #039DDE;
+          color: white;
+          border: 1vw solid #039DDE;
+          border-radius: 1.5vw;
+          transition-duration: 0.2s;
+          transition-timing-function: linear;
+        }
+        .bt-dp:hover{
+          color: white;
+          font-size: 1.5vw;
+          border: 1.7vw solid #039DDE;
+          border-left: 9.8vw solid #039DDE;
+          left: 27vw;
+        }
     </style>
 </head>
 <body>
   <nav class="nav-principal">
-    <img src="img/Logo Josival Penha.png" class="logo-jp-nav" id="logo-jp-nav" alt="Logo JP">
+    <img src="img/Logos/Logo Josival Penha.png" class="logo-jp-nav" id="logo-jp-nav" alt="Logo JP">
     <a class="tel-link tel-link1" id="tel-link tel-link1" href="tel:34372618" rel="external">
-      <img src="img/Logo telefone.png" alt="Número Josival Penha" class="logo-tel logo-tel1" id="logo-tel logo-tel1">
+      <img src="img/Logos/Logo telefone.png" alt="Número Josival Penha" class="logo-tel logo-tel1" id="logo-tel logo-tel1">
       <div class="logo-tel-txt logo-tel-txt1" id="logo-tel-txt
       logo-tel-txt1">(81) 3437-2618</div>
     </a>
     <a class="tel-link" id="tel-link" href="tel:81994997501" rel="external">
-      <img src="img/Logo telefone.png" alt="Número Josival Penha" class="logo-tel" id="logo-tel">
+      <img src="img/Logos/Logo telefone.png" alt="Número Josival Penha" class="logo-tel" id="logo-tel">
       <div class="logo-tel-txt" id="logo-tel-txt">(81) 99499-7501</div>
     </a>
+
   </nav>
   <section class="part-prin">
     <img src="img/Alunos Josival Penha.png" class="ft-principal" id="ft-principal" alt="Imagem de crianças">
@@ -330,35 +350,48 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
       </span>
     </div>
+    <a href="depoimentos.html" class="bt-dp" id="bt-dp" onmouseover="btDp()" onmouseout="btDp2()">
+      <div class="txt-bt-dp" id="txt-bt-dp">Acompanhe nossa sessão de depoimentos</div>
+    </a>
   </section>
   <footer class="pt-baixo" id="pt-baixo">
     <div class="insta rs" id="insta">
       <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-insta link-rs" id="link-insta" target="_blank">
-        <img src="img/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta">
+        <img src="img/Logos/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta">
         <span class="txt-insta txt-rs" id="txt-insta">@josival.penha</span>
       </a>
 
     </div>
     <div class="yt rs" id="yt">
       <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/about" rel="external" class="link-yt link-rs" id="link-yt" target="_blank">
-        <img src="img/Logo Youtube.png" alt="Youtube Josival Penha" class="logo-yt logo-rs" id="logo-yt">
+        <img src="img/Logos/Logo Youtube.png" alt="Youtube Josival Penha" class="logo-yt logo-rs" id="logo-yt">
         <span class="txt-yt txt-rs" id="txt-yt">Inst. Educacional Josival Penha</span>
       </a>
     </div>
     <div class="gg-maps rs" id="gg-maps">
       <a href="https://goo.gl/maps/dM31qyiR22TeQshZ8" rel="external" class="link-gg-maps link-rs" id="link-gg-maps" target="_blank">
-        <img src="img/Logo Google Maps.png" alt="Google Mapa Josival Penha" class="logo-gg-maps logo-rs" id="logo-gg-maps">
+        <img src="img/Logos/Logo Google Maps.png" alt="Google Mapa Josival Penha" class="logo-gg-maps logo-rs" id="logo-gg-maps">
         <span class="txt-gg-maps txt-rs" id="txt-gg-maps">Instituto Educacional Josival Penha - Avenida João Paulo II - Mirueira, Paulista - PE</span>
       </a>
     </div>
     <div class="whats rs" id="whats">
       <a href="https://api.whatsapp.com/send?phone=5555819949975&text=Boa%20tarde%2C%20gostaria%20de%20falar%20com%20a%20diretora-" rel="external" class="link-whats link-rs" id="link-whats" target="_blank">
-        <img src="img/Logo Whatsapp.png" alt="Whatsapp Josival Penha" class="logo-whats logo-rs" id="logo-whats">
+        <img src="img/Logos/Logo Whatsapp.png" alt="Whatsapp Josival Penha" class="logo-whats logo-rs" id="logo-whats">
         <span class="txt-whats txt-rs" id="txt-whats">(81) 99499-7501</span>
       </a>
     </div>
   </footer>
   <script>
+      function btDp2() {
+        var txt = window.document.getElementById('txt-bt-dp')
+        txt.style.marginRight = '0vw'
+      }
+      function btDp() {
+        var txt = window.document.getElementById('txt-bt-dp')
+        txt.style.transitionDuration = '0.1s'
+        txt.style.transitionTimingFunction = 'linear'
+        txt.style.marginRight = '7vw'
+      }
       function txtPaHo1() {
         var txt = window.document.getElementById('txt-desc-pais1')
         txt.style.transitionDuration = '0.3s'
