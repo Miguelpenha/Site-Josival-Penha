@@ -39,7 +39,7 @@
         }
         .txt-voltar{
             color: #009CDE;
-            font-size: 3vw;
+            font-size: 1.3vw;
             font-weight: 500;
         }
         .bt-voltar:hover{
@@ -377,6 +377,10 @@
             txt.style.transitionDuration = '0.3s'
             txt.style.transitionTimingFunction = 'linear'
             txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
+        }
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<=740){
+            txt_voltar = window.document.getElementById('txt-voltar')
+            txt_voltar.style.fontSize = '3vw'
         }
       </script>
 </body>
