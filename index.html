@@ -382,6 +382,14 @@
     </div>
   </footer>
   <script>
+      var map = {}
+      onkeydown = onkeyup = function(e){
+        e = e || event
+        map[e.keyCode] = e.type == 'keydown'
+        if(map[18] && map[83]) {
+          window.location.assign('/depoimentos.html')
+        }
+      }
       function insta2() {
         var logo = window.document.getElementById('logo-insta-msg')
         logo.style.visibility = 'hidden'
