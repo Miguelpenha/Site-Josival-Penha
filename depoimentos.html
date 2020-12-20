@@ -187,13 +187,17 @@
         }
         .bt-back-to-top{
           position: fixed;
-          left: 94vw;
+          left: 95.5vw;
           top: 43vw;
-          border: 1vw solid rgb(228, 82, 82);
-          background-color: rgb(136, 67, 67);
+          border: 0.5vw solid white;
+          background-color:white ;
           color: #039DDE;
           text-decoration: none;
           border-radius: 50%;
+          transition-duration: 0.7s;
+          transition-timing-function: linear;
+          opacity: 00%;
+          visibility: hidden;
         }
     </style>
 </head>
@@ -281,9 +285,21 @@
         </div>
       </section>
       <a class="bt-back-to-top" id="bt-back-to-top" href="#" onclick="btTop()">
-        <img src="img/Logos/Seta Para Cima.png" alt="" width="4.166666666666667vw" height="4.166666666666667vw">
+        <img src="img/Logos/Logo Seta Para Cima.png" width="32vw">
       </a>
       <script>
+        window.addEventListener("scroll", function (event) {
+          var scroll = this.scrollY;
+          if (scroll >= 2466.39990234375) {
+            var bt = window.document.getElementById('bt-back-to-top')
+            bt.style.opacity = '100%'
+            bt.style.visibility = 'visible'
+          }else{
+            var bt = window.document.getElementById('bt-back-to-top')
+            bt.style.opacity = '00%'
+            bt.style.visibility = 'hidden'
+          }
+        })
         function btTop() {
           window.scroll(00, 00)
         }
