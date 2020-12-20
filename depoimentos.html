@@ -185,6 +185,16 @@
           position: absolute;
           bottom: 100vw;
         }
+        .bt-back-to-top{
+          position: fixed;
+          left: 94vw;
+          top: 43vw;
+          border: 1vw solid rgb(228, 82, 82);
+          background-color: rgb(136, 67, 67);
+          color: #039DDE;
+          text-decoration: none;
+          border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -270,7 +280,13 @@
           </span>
         </div>
       </section>
+      <a class="bt-back-to-top" id="bt-back-to-top" href="#" onclick="btTop()">
+        <img src="img/Logos/Seta Para Cima.png" alt="" width="4.166666666666667vw" height="4.166666666666667vw">
+      </a>
       <script>
+        function btTop() {
+          window.scroll(00, 00)
+        }
         function txtPaHo1() {
             var txt = window.document.getElementById('txt-desc-pais1')
             txt.style.transitionDuration = '0.3s'
