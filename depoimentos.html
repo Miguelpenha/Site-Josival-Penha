@@ -288,6 +288,14 @@
         <img src="img/Logos/Logo Seta Para Cima.png" width="32vw">
       </a>
       <script>
+        var map = {}
+        onkeydown = onkeyup = function(e){
+          e = e || event
+          map[e.keyCode] = e.type == 'keydown'
+          if(map[18] && map[72]) {
+            window.location.assign('/index.html')
+          }
+        }
         window.addEventListener("scroll", function (event) {
           var scroll = this.scrollY;
           if (scroll >= 2466.39990234375) {
