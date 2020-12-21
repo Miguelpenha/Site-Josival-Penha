@@ -23,13 +23,13 @@
             margin-top: auto;
             margin-bottom: auto;
             color: white;
-            font-size: 2.5vw;
+            font-size: 3vw;
             font-weight: 500;
         }
         .nav{
             background-color: #12acee;
             text-align: center;
-            height: 8vw;
+            height: 12vw;
         }
         .bt-voltar{
             position: absolute;
@@ -51,14 +51,14 @@
         }
         .dp{
           position: absolute;
-          top: 8vw;
+          top: 12vw;
           background-color: rgb(233, 233, 233);
           width: 100%;
           height: 130%;
         }
         .dp1{
           position: absolute;
-          top: 108vw;
+          top: 112vw;
           background-color: rgb(233, 233, 233);
           width: 100%;
           height: 130%;
@@ -180,8 +180,8 @@
         }
         .bt-back-to-top{
           position: fixed;
-          left: 95%;
-          top: 90%;
+          left: 93%;
+          top: 80%;
           border: 0.5vw solid white;
           background-color:white ;
           color: #039DDE;
@@ -191,6 +191,9 @@
           transition-timing-function: linear;
           opacity: 00%;
           visibility: hidden;
+        }
+        .bt-back-to-top-img{
+          border-radius: 50%;
         }
     </style>
 </head>
@@ -280,7 +283,7 @@
         </section>
     </section>
       <a class="bt-back-to-top" id="bt-back-to-top" href="#" onclick="btTop()">
-        <img src="img/Logos/Logo Seta Para Cima.png" width="32vw">
+        <img src="img/Logos/Logo Seta Para Cima.png" width="32vw" class="bt-back-to-top-img">
       </a>
       <script>
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<=740){
@@ -512,7 +515,7 @@
         }
         window.addEventListener("scroll", function (event) {
           var scroll = this.scrollY;
-          if (scroll >= window.screen.height*1.5) {
+          if (scroll >= window.screen.height) {
             var bt = window.document.getElementById('bt-back-to-top')
             bt.style.opacity = '100%'
             bt.style.visibility = 'visible'
