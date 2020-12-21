@@ -94,19 +94,20 @@
         .mapa{
           position: absolute;
           width: 40vw;
+          top: 168vw;
         }
         .mapa-in{
           position: absolute;
-          width: 40vw;
-          height: 33.1vw;
+          width: 48vw;
+          height: 40vw;
           top: 30vw;
         }
         .pt-baixo{
           position: absolute;
-          top: 131vw;
-          padding-bottom: 20vw;
+          top: 280%;
           background-color: rgb(209, 209, 209);
           width: 100%;
+          padding-bottom: 5vw;
         }
         .link-rs{
           text-decoration: none;
@@ -120,7 +121,7 @@
         }
         .dp{
           position: absolute;
-          top: 80vw;
+          top: 118%;
           width: 100%;
         }
         .c-dp{
@@ -248,6 +249,7 @@
           border-radius: 1.5vw;
           transition-duration: 0.2s;
           transition-timing-function: linear;
+          width: 40.1vw;
         }
         .bt-dp:hover{
           color: white;
@@ -268,6 +270,11 @@
           width: 10vw;
           bottom: 27.3vw;
           left: 3.7vw;
+        }
+        .pt-media{
+          position: absolute;
+          height: 200vw;
+          bottom: 5vw;
         }
     </style>
 </head>
@@ -293,7 +300,6 @@
         <span class="txt-bt-principal" id="txt-bt-principal">Quero fazer uma visita</span>
       </a>
   </section>
-  </section>
   <section class="pt-media" id="pt-media">
     <section class="mapa" id="mapa">
       <span class="txt-mapa" id="txt-mapa">Nossa Localização</span>
@@ -302,47 +308,47 @@
       val%20Penha!5e0!3m2!1spt-BR!2sbr!4v1608060148378!5m2!1spt-BR!2sbr" frameborder="0" 
       style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa-in" id="mapa-in"></iframe>
     </section>
-  </section>
-  <section class="dp" id="dp">
-    <div class="c-dp c-dp-1" id="c-dp c-dp-1">
-      <img src="img/dp/Pais/Fernanda Sales.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
-      <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Fernanda Sales</a>
-      <span class="txt-sub-pais" id="txt-sub-pais">
-        Mãe do <span class="txt-sub-pais-st" id="txt-sub-pais-st">Caio Sales</span>
-      </span>
-      <span class="txt-desc-pais" id="txt-desc-pais1" onmouseover="txtPaHo1()">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-      </span>
-      <img src="img/dp/Alunos/Caio Sales.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
-      <span class="txt-tit-alunos" id="txt-tit-alunos">Caio Sales</span>
-      <span class="txt-sub-alunos" id="txt-sub-alunos">
-        Aluno do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 3</span>
-      </span>
-      <span class="txt-desc-alunos" id="txt-desc-alunos1" onmouseover="txtAluHo1()">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-      </span>
-    </div>
-    <div class="c-dp c-dp-2" id="c-dp c-dp-2">
-      <img src="img/dp/Pais/Lisandra Carla.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
-      <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Lisandra Carla</a>
-      <span class="txt-sub-pais" id="txt-sub-pais">
-        Mãe da <span class="txt-sub-pais-st" id="txt-sub-pais-st">Lisa Carla</span>
-      </span>
-      <span class="txt-desc-pais" id="txt-desc-pais2" onmouseover="txtPaHo2()">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-      </span>
-      <img src="img/dp/Alunos/Lisa Carla.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
-      <span class="txt-tit-alunos" id="txt-tit-alunos">Lisa Carla</span>
-      <span class="txt-sub-alunos" id="txt-sub-alunos">
-        Aluna do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 4</span>
-      </span>
-      <span class="txt-desc-alunos" id="txt-desc-alunos2" onmouseover="txtAluHo2()">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-      </span>
-    </div>
-    <a href="depoimentos.html" class="bt-dp" id="bt-dp" onmouseover="btDp()" onmouseout="btDp2()">
-      <div class="txt-bt-dp" id="txt-bt-dp">Acompanhe nossa sessão de depoimentos</div>
-    </a>
+    <section class="dp" id="dp">
+      <div class="c-dp c-dp-1" id="c-dp c-dp-1">
+        <img src="img/dp/Pais/Fernanda Sales.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
+        <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Fernanda Sales</a>
+        <span class="txt-sub-pais" id="txt-sub-pais">
+          Mãe do <span class="txt-sub-pais-st" id="txt-sub-pais-st">Caio Sales</span>
+        </span>
+        <span class="txt-desc-pais" id="txt-desc-pais1" onmouseover="txtPaHo1()">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+        </span>
+        <img src="img/dp/Alunos/Caio Sales.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
+        <span class="txt-tit-alunos" id="txt-tit-alunos">Caio Sales</span>
+        <span class="txt-sub-alunos" id="txt-sub-alunos">
+          Aluno do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 3</span>
+        </span>
+        <span class="txt-desc-alunos" id="txt-desc-alunos1" onmouseover="txtAluHo1()">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+        </span>
+      </div>
+      <div class="c-dp c-dp-2" id="c-dp c-dp-2">
+        <img src="img/dp/Pais/Lisandra Carla.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
+        <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Lisandra Carla</a>
+        <span class="txt-sub-pais" id="txt-sub-pais">
+          Mãe da <span class="txt-sub-pais-st" id="txt-sub-pais-st">Lisa Carla</span>
+        </span>
+        <span class="txt-desc-pais" id="txt-desc-pais2" onmouseover="txtPaHo2()">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+        </span>
+        <img src="img/dp/Alunos/Lisa Carla.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
+        <span class="txt-tit-alunos" id="txt-tit-alunos">Lisa Carla</span>
+        <span class="txt-sub-alunos" id="txt-sub-alunos">
+          Aluna do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 4</span>
+        </span>
+        <span class="txt-desc-alunos" id="txt-desc-alunos2" onmouseover="txtAluHo2()">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
+        </span>
+      </div>
+      <a href="depoimentos.html" class="bt-dp" id="bt-dp" onmouseover="btDp()" onmouseout="btDp2()">
+        <div class="txt-bt-dp" id="txt-bt-dp">Acompanhe nossa sessão de depoimentos</div>
+      </a>
+    </section>
   </section>
   <footer class="pt-baixo" id="pt-baixo">
     <div class="insta rs" id="insta">
