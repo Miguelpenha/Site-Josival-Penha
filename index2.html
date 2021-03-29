@@ -164,7 +164,63 @@
             }
         }
 
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 12px;
+            transition-timing-function: linear;
+            transition-duration: 0.2s;
+        }
 
+        input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+            border: 2px solid #FD3535;
+        }
+
+        .form {
+            width: 40%;
+            border-radius: 5px;
+            background-color: #049DD9;
+            padding: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+        }
+
+        .btn-jp {
+            width: 80%;
+            background-color: #FD3535;
+            color: white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 12px;
+            transition-timing-function: linear;
+            transition-duration: 0.3s;
+        }
+
+        .btn-jp:hover {
+            color: white;
+            opacity: 90%;
+        }
+
+        .campo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            border-radius: 22px;
+        }
     </style>
 </head>
 <body>
@@ -200,5 +256,29 @@
             </a>
         </div>
    </div>
+    <div class="form">
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <input type="hidden" name="accessKey" value="fceb1d76-722a-440d-aed7-b4ee86175171">
+            <div class="campo">
+                <label for="Nome">Nome: </label>
+                <br>
+                <input type="text" name="name" required>
+            </div>
+            <div class="campo">
+                <label for="E-mail">E-mail: </label>
+                <br>
+                <input type="text" name="email" required>
+            </div>
+            <br>
+            <input type="hidden" name="redirectTo" value="https://josivalpenha.site/obrigado.html">
+            <input type="submit" value="Submit" class="btn btn-jp"/>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>
