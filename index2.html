@@ -187,7 +187,7 @@
         }
 
         .form {
-            width: 40%;
+            width: 30%;
             border-radius: 5px;
             background-color: #049DD9;
             padding: 20px;
@@ -260,9 +260,14 @@
         <form action="https://api.staticforms.xyz/submit" method="post">
             <input type="hidden" name="accessKey" value="fceb1d76-722a-440d-aed7-b4ee86175171">
             <div class="campo">
-                <label for="Nome">Nome: </label>
+                <label for="Nome">Primeiro Nome: </label>
                 <br>
-                <input type="text" name="name" required>
+                <input type="text" name="$primeiroNome" required>
+                <br>
+                <label for="Nome">Segundo Nome: </label>
+                <br>
+                <input type="text" name="$segundoNome" required>
+                <br>
             </div>
             <div class="campo">
                 <label for="E-mail">E-mail: </label>
