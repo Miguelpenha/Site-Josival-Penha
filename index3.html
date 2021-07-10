@@ -353,7 +353,7 @@
             color: #ffffff;
         }
 
-        input:focus {
+        .campo:focus {
             transition-timing-function: linear;
             transition-duration: 0.1s;
             outline: none;
@@ -373,6 +373,7 @@
             font-size: 32px;
             line-height: 35.2px;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         .sub-tit-campo-txt {
@@ -395,6 +396,10 @@
             .central {
                 padding-bottom: 35%;
             }
+        }
+
+        textarea {
+            resize: none;
         }
     </style>
 </head>
@@ -456,7 +461,7 @@
     <div class="row central">
         <div class="col-1 central-campo-txt">
             <div class="row tit-campo-txt">
-                <h1>INSCREVA-SE AGORA</h1>
+                <h1>Matricule-se Agora</h1>
             </div>
             <div class="row sub-tit-campo-txt">
                 <p>O Josival Penha utiliza dos mais modernos métodos e conceitos pedagógicos com atividades escolares e extracurriculares durante todo o ano, inseridas de forma gradual e contínua, e conduzidas para estimular e desenvolver nos alunos a criatividade, a formação de um raciocínio lógico, o interesse pelo aprendizado e a construção de valores morais para o convívio social, como responsabilidade, respeito, e cidadania.</p>
@@ -473,6 +478,7 @@
                     <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri">
                     <input type="tel" placeholder="Número de telefone" class="campo campo-top" id="Num">
                     <input type="email" placeholder="Endereço de e-mail" class="campo campo-top" id="email">
+                    <textarea name=""  class="campo campo-top" id="" cols="30" rows="5" placeholder="Deixe a sua mensagem"></textarea>
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
