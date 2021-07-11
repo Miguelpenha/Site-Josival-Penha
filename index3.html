@@ -465,17 +465,17 @@
                 <p>O nosso processo educativo incentiva a interação entre a teoria e a prática, o pensar e o fazer, entendemos que tanto os educadores como os estudantes podem ensinar e aprender.</p>
             </div>
         </div>
-        <div action="" id="central-campo-form" class="col-1">
-            <form action="" id="central-form" class="row">
+        <div id="central-campo-form" class="col-1">
+            <form action="https://escola-node-js.herokuapp.com/api/site/info/contato" method="POST" id="central-form" class="row">
                 <div class="row campo-tit">
                     <h4>Entre em Contato</h4>
                 </div>
                 <div class="row campos">
-                    <input type="text" placeholder="Nome do responsavel (obrigatório)" class="campo" id="nomeRes" nome="nomeRes">
-                    <input type="text" placeholder="Nome da criança (obrigatório)" class="campo campo-top" id="nomeCri" name="nomeCri">
-                    <input type="tel" placeholder="Número de telefone (obrigatório)" class="campo campo-top" id="telefone" nome="telefone">
-                    <input type="email" placeholder="Endereço de e-mail (obrigatório)" class="campo campo-top" id="email" name="email">
-                    <textarea name="msg" id="msg"  class="campo campo-top" cols="30" rows="5" placeholder="Deixe a sua mensagem"></textarea>
+                    <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
+                    <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
+                    <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
+                    <input type="tel" placeholder="Número de telefone" class="campo campo-top" id="telefone" name="telefone" required>
+                    <input type="email" placeholder="Endereço de e-mail" class="campo campo-top" id="email" name="email">
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
@@ -484,7 +484,7 @@
    <script>
        const url = window.document.location.search.split('?')[1]
        if (url) {
-        fetch(`http://localhost:3000/api/site/info/links/${url}`)
+        fetch(`https://escola-node-js.herokuapp.com/api/site/info/links/${url}`)
        }
        async function clicksBtnPrin() {
         fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
