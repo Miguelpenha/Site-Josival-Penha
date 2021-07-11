@@ -485,6 +485,11 @@
         </div>
    </div>
    <script>
+       $('.btn-ctt-nav-bar').click(() => {
+           fetch('https://escola-node-js.herokuapp.com/api/site/clicksBtnPrin')
+       })
+   </script>
+   <script>
         //<![CDATA[
             $(window).on('load', function () {
                 $('#preloader .inner').fadeOut()
