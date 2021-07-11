@@ -449,10 +449,7 @@
                 <img src="img/Logos/Logo Josival Penha.png" alt="Logo Josival Penha" class="logo-jp">
             </div>
             <div class="col-6 campo-btn-ctt-nav-bar">
-                <a href="https://form.jotform.com/203157184258659" target="_blank" rel="external" style="text-decoration: none;" class="btn btn-ctt-nav-bar">Quero fazer uma visita</a>
-            </div>
-            <div class="col-6 campo-btn-ctt-nav-bar campo-btn-ctt-nav-bar-row">
-                <a href="https://form.jotform.com/203157184258659" target="_blank" rel="external" style="text-decoration: none;" class="btn btn-ctt-nav-bar">Quero fazer uma visita</a>
+                <a target="_blank" rel="external" style="text-decoration: none;" class="btn btn-ctt-nav-bar" id="btn-ctt-nav-bar" onclick="clicksBtnPrin()">Quero fazer uma visita</a>
             </div>
         </nav>
     </nav>
@@ -485,9 +482,14 @@
         </div>
    </div>
    <script>
-       $('.btn-ctt-nav-bar').click(() => {
-           fetch('https://escola-node-js.herokuapp.com/api/site/clicksBtnPrin')
-       })
+       async function clicksBtnPrin() {
+        try {
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
+            console.log('deu')
+        } catch {
+            console.log('erro')
+        }
+       }
    </script>
    <script>
         //<![CDATA[
