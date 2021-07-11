@@ -482,6 +482,10 @@
         </div>
    </div>
    <script>
+       const url = window.document.location.search.split('?')[1]
+       if (url) {
+        fetch(`http://localhost:3000/api/site/info/links/${url}`)
+       }
        async function clicksBtnPrin() {
         fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
        }
