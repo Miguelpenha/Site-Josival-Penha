@@ -2,616 +2,581 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Educacional Josival Penha</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2? family = Roboto: wght @ 300 & display = swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap" rel="stylesheet">
+    <!-- Favicons -->
     <link rel="shortcut icon" href="img/Favicons/favicon.png" type="image/x-icon">
     <link rel="icon" href="img/Favicons/favicon_32.png" sizes="32x32">
     <link rel="icon" href="img/Favicons/favicon_48.ico" sizes="48x48">
     <link rel="icon" href="img/Favicons/favicon_96.png" sizes="96x96">
     <link rel="icon" href="img/Favicons/favicon_144.png" sizes="144x144">
     <style>
-        html{
-          font-family: 'Roboto', sans-serif;
+        * {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            color: #ffffff;
         }
-        body{
-          height: 120vw;
+
+        body {
+            overflow: hidden;
+            background-color: #009CDE;
         }
-        .logo-jp-nav{
-          height: 3.8vw;
-          width: 13vw;
-          margin-top: 1vw;
-          margin-bottom: 1vw;
+    
+        #preloader {
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: #009CDE;
+            z-index:999;
         }
-        .ft-principal{
-          width: 100%;
-          position: absolute;
-          right: 0.1vw;
-          height: 400px;
+
+        #preloader .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  
         }
-        .link-cont{
-          position: absolute;
-          text-decoration: none;
-          color: white;
-          font-size: 1.7vw;
-          font-weight: 600;
-          left: 3%;
-          top: 25vw;
-          background-color: #FD3535;
-          border: 1vw solid #FD3535;
-          border-radius: 1.2vw;
+
+        .bolas > div {
+            display: inline-block;
+            background-color: #ffffff;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            margin: 3px;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-name: animarBola;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
-        .link-cont:hover{
-          opacity: 85%;
-          color: white;
+
+        .bolas > div:nth-child(1) {
+            animation-duration: 0.75s ;
+            animation-delay: 0;
         }
-        .txt-principal1{
-          position: absolute;
-          color: white;
-          font-size: 3vw;
-          font-weight:500;
-          left: 3%;
-          top: 8.5vw;
+
+        .bolas > div:nth-child(2) {
+            animation-duration: 0.75s ;
+            animation-delay: 0.12s;
         }
-        .txt-principal2{
-          position: absolute;
-          color: white;
-          font-size: 1.8vw;
-          font-weight: 300;
-          left: 3%;
-          top: 14vw;
+
+        .bolas > div:nth-child(3) {
+            animation-duration: 0.75s  ;
+            animation-delay: 0.24s;
         }
-        .tel-link{
-          position: absolute;
-          text-decoration: none;
-          color: rgb(128, 128, 128);
-          font-size: 1.5vw;
-          font-weight: 500;
-          top: 1.7vw;
-          left: 75vw;
-          width: 20vw;
+        
+        @keyframes animarBola {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            16% {
+                -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+                opacity: 0.7;
+            }
+            
+            33% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1; 
+            }
         }
-        .tel-link:hover{
-          color: rgb(128, 128, 128);
+
+        .link-pd {
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+            text-decoration: none;
+            color: #ffffff;
+            fill: #ffffff;
         }
-        .logo-tel-txt{
-          position: absolute;
-          left: 2vw;
+
+        .link-pd:hover {
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+            color: #dbdbdb;
+            fill: #dbdbdb;
+            text-decoration: underline;
         }
-        .logo-tel-txt:hover{
-          color: #666666;
+
+        .link-pd-svg {
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+            text-decoration: none;
+            color: #ffffff;
+            fill: #ffffff;
         }
-        .logo-tel{
-          width: 1.5vw;
-          -webkit-transform: rotate(10deg);
-          -ms-transform: rotate(10deg);
-          transform: rotate(10deg);
-          position: absolute;
-          top: 0.5vw;
+
+        .link-pd-svg:hover {
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+            color: #dbdbdb;
+            fill: #dbdbdb;
         }
-        .tel-link1{
-          position: absolute;
-          left: 57vw;
+        
+        .navs-top {
+            width: 100%;
+            margin-left: 0;
+            position: fixed;
         }
-        .mapa{
-          position: absolute;
-          width: 40vw;
-          top: 168vw;
+
+        .pre-nav-bar {
+            background-color: #0580b4;
+            width: 100%;
+            margin-left: 0;
+            padding-bottom: 0.2%;
         }
-        .mapa-in{
-          position: absolute;
-          width: 48vw;
-          height: 40vw;
-          top: 30vw;
+
+        .links-pre-nav-bar {
+            margin-bottom: 0;
+            font-weight: 300;
+            width: 81%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
         }
-        .pt-baixo{
-          position: absolute;
-          top: 280%;
-          background-color: rgb(209, 209, 209);
-          width: 100%;
-          padding-bottom: 5vw;
+        
+        .link-pre-nav-bar {
+            font-size: 17px;
+            display: inline;
+            margin-right: 5%;
+            font-weight: 400;
         }
-        .link-rs{
-          text-decoration: none;
+
+        .nav-bar {
+            background-color: #ebebeb;
+            width: 100%;
+            padding-top: 0.6%;
+            padding-bottom: 0.6%;
+            margin-left: 0;
         }
-        .logo-rs{
-          width: 3.2vw;
+
+        .campo-logo-jp {
+            margin-bottom: 0.8%;
         }
-        .rs{
-          padding-top: 2vw;
-          padding-left: 0.5vw;
+
+        .campo-logo-jp-row {
+            display: none;
         }
-        .dp{
-          position: absolute;
-          top: 118%;
-          width: 100%;
+
+        .logo-jp {
+            margin-top: 1.2%;
+            width: 220px;
+            margin-left: 18%;
         }
-        .c-dp{
-          top: 3vw;
-          border: 0.1vw solid rgb(211, 211, 211);
-          height: 39.0625vw;
-          width: 45.572916666666664vw;
-          background-color: #039DDE;
-          border-radius: 2vw;
+
+        .campo-btn-ctt-nav-bar {
+            line-height: 470%;
+            text-align: center;
         }
-        .c-dp-1{
-          position: absolute;
-          left: 1vw;
+
+        .campo-btn-ctt-nav-bar-row {
+            display: none;
+            width: 100%;
+            padding: 0;
         }
-        .img-c-dp-pais{
-          border-radius: 50%;
-          width: 16.666666666666668vw;
-          position: absolute;
-          left: 1vw;
-          top: 1vw;
-          transition-duration: 0.1s;
-          transition-timing-function: linear;
+
+        .btn-ctt-nav-bar {
+            background-color: #FD3535;
+            font-weight: 600;
+            vertical-align: middle;
+            font-size: 15px;
+            padding: 1%;
+            width: 210px;
+            height: 40px;
+            color: #ffffff;
         }
-        .txt-tit-pais{
-          position: absolute;
-          top: 7vw;
-          font-size: 2.5vw;
-          font-weight: 700;
-          color: white;
-          left: 19vw;
-          text-decoration: none;
+
+        .btn-ctt-nav-bar:hover {
+            background-color: #fa5c5c;
+            color: #ffffff;
         }
-        .txt-tit-pais:hover{
-          color: white;
-          text-decoration: underline;
+
+        @media screen and (max-width: 768px) {
+            .pre-nav-bar {
+                display: none;
+            }
+
+            .btn-ctt-nav-bar {
+                padding-top: 2%;
+            }
         }
-        .txt-sub-pais{
-          position: absolute;
-          top: 10.5vw;
-          left: 19.1vw;
-          color: white;
-          font-size: 1.5vw;
-          width: 20vw;
+
+        @media screen and (max-width: 551px) {
+            .campo-logo-jp {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .logo-jp {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .campo-btn-ctt-nav-bar {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .campo-logo-jp {
+                display: none;
+            }
+
+            .campo-btn-ctt-nav-bar {
+                display: none;
+            }
+
+            .campo-logo-jp-row {
+                display: block;
+            }
+            
+            .campo-btn-ctt-nav-bar-row {
+                display: block;
+            }
+
+            .btn-ctt-nav-bar {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                width: 200px;
+            }
         }
-        .txt-sub-pais-st{
-          font-weight: 500;
+
+        .central {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 5.3%;
+            background-image: url('img/fotos-jp-1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 15%;
         }
-        .txt-desc-pais{
-          position: absolute;
-          color: white;
-          top: 14vw;
-          left: 19.2vw;
-          font-size: 1.2vw;
+
+        .central-campo-txt {
+            display: block;
+            width: 60%;
         }
-        .img-c-dp-alunos{
-          border-radius: 50%;
-          width: 8.333333333333334vw;
-          position: absolute;
-          left: 0.7vw;
-          top: 25vw;
-          transition-duration: 0.1s;
-          transition-timing-function: linear;
+
+        .central-campo-form {
+            display: block;
+            width: 40%;
+            padding: 2%;
         }
-        .img-c-dp-alunos:hover{
-          border-radius: 25%;
+
+        #central-form {
+            width: 70%;
+            background-color: rgba(0, 0, 0, 0.534);
+            padding-bottom: 10%;
         }
-        .img-c-dp-pais:hover{
-          border-radius: 25%;
+
+        .campo-tit {
+            margin-left: 0;
+            padding-top: 5%;
+            padding-bottom: 3%;
         }
-        .txt-sub-alunos-st{
-          font-weight: 500;
+
+        .campo-tit h4 {
+            text-align: center;
         }
-        .txt-tit-alunos{
-          position: absolute;
-          top: 27vw;
-          font-size: 1.8vw;
-          font-weight: 700;
-          color: white;
-          left: 10vw;
+
+        .campos {
+            margin-left: 0;
         }
-        .txt-sub-alunos{
-          position: absolute;
-          top: 29.3vw;
-          color: white;
-          width: 30vw;
-          left: 10.1vw;
-          font-size: 1.5vw;
+
+        .campo {
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            padding: 1.8%;
         }
-        .txt-desc-alunos{
-          color: white;
-          position: absolute;
-          top: 32vw;
-          font-size: 0.9vw;
-          left: 10.1vw;
-          transition-duration: 0.1s;
-          transition-timing-function: linear;
+
+        .campo-top {
+            margin-top: 4%;
+            margin-bottom: 1%;
         }
-        .txt-desc-alunos:hover{
-          font-size: 1.5vw;
+
+        ::-webkit-input-placeholder {
+            color: #ffffff;
         }
-        .txt-desc-pais:hover{
-          font-size: 1.7vw;
+
+        :-moz-placeholder {
+            color: #ffffff;  
         }
-        .c-dp-2{
-          position: absolute;
-          left: 52vw;
+
+        ::-moz-placeholder {
+            color: #ffffff;  
         }
-        .c-dp-2{
-          position: absolute;
-          left: 50vw;
+
+        :-ms-input-placeholder {  
+            color: #ffffff;  
         }
-        .c-dp-1{
-          position: absolute;
-          left: 2.5vw;
+
+        .btn-form {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+            background-color: #009CDE;
+            color: #ffffff;
+            margin-top: 10%;
+            padding: 2%;
         }
-        .bt-dp{
-          text-decoration: none;
-          position: absolute;
-          top: 43.5vw;
-          left: 32vw;
-          font-size: 2vw;
-          background-color: #039DDE;
-          color: white;
-          border: 1.3vw solid #039DDE;
-          border-radius: 1.5vw;
-          transition-duration: 0.2s;
-          transition-timing-function: linear;
-          width: 40.1vw;
+
+        .btn-form:hover {
+            background-color: #20b0ee;
+            color: #ffffff;
         }
-        .bt-dp:hover{
-          color: white;
-          opacity: 90%;
-          position: absolute;
+
+        .campo:focus {
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
         }
-        .logo-msg{
-          position: absolute;
-          visibility: hidden;
+
+        .tit-campo-txt {
+            margin-top: 10%;
+            margin-left: 17%;
+            margin-bottom: 1%;
         }
-        .logo-msg:hover{
-          text-decoration: underline;
-          color: #039DDE;
+
+        .tit-campo-txt h1 {
+            font-size: 32px;
+            line-height: 35.2px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
-        .logo-msg2{
-          position: absolute;
-          height: 3.9vw;
-          width: 10vw;
-          bottom: 27.3vw;
-          left: 3.7vw;
+
+        .sub-tit-campo-txt {
+            margin-left: 17%;
         }
-        .pt-media{
-          position: absolute;
-          height: 200vw;
-          bottom: 5vw;
+
+        p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        @media screen and (max-width: 1256px){
+            .central {
+                padding-bottom: 25%;
+            }
+        }
+
+        @media screen and (max-width: 961px){
+            .central {
+                padding-bottom: 35%;
+            }
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .central-campo-txt-row {
+            display: none;
+        }
+
+        .central-campo-form-row {
+            display: none;
+        }
+
+        @media screen and (max-width: 875px) {
+            .central-campo-txt {
+                display: none;
+            }
+
+            .central-campo-form {
+                display: none;
+            }
+
+            .central-campo-form-row {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .central-campo-txt-row {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .central-campo-txt-row>.tit-campo-txt {
+                margin-left: 0;
+            }
+
+            .central-campo-txt-row>.sub-tit-campo-txt {
+                margin-left: 0;
+            }
+
+            .central-campo-form-row>#central-form {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 95%;
+            }
+
+            .sub-tit-campo-txt>p {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 10%;
+                font-weight: 400;
+            }
+
+            .campo-tit h4 {
+                text-align: left;
+            }
         }
     </style>
 </head>
 <body>
-  <nav class="nav-principal">
-    <img src="img/Logos/Logo Josival Penha.png" class="logo-jp-nav" id="logo-jp-nav" alt="Logo JP">
-    <a class="tel-link tel-link1" id="tel-link tel-link1" href="tel:34372618" rel="external">
-      <img src="img/Logos/Logo telefone.png" alt="Número Josival Penha" class="logo-tel logo-tel1" id="logo-tel logo-tel1">
-      <div class="logo-tel-txt logo-tel-txt1" id="logo-tel-txt
-      logo-tel-txt1">(81) 3437-2618</div>
-    </a>
-    <a class="tel-link" id="tel-link" href="tel:81994997501" rel="external">
-      <img src="img/Logos/Logo telefone.png" alt="Número Josival Penha" class="logo-tel" id="logo-tel">
-      <div class="logo-tel-txt" id="logo-tel-txt">(81) 99499-7501</div>
-    </a>
-
-  </nav>
-  <section class="part-prin">
-    <img src="img/Alunos Josival Penha.png" class="ft-principal" id="ft-principal" alt="Imagem de crianças">
-      <p class="txt-principal txt-principal1"id="txt-principal1">Faça parte da nossa família</p>
-      <p class="txt-principal txt-principal2" id="txt-principal2">Conheça e entenda a nossa metodologia educacional e descubra <br> porque o Josival Penha é a melhor opção da região para o seu filho!</p>
-      <a class="link-cont" target="_blank" href="https://form.jotform.com/203157184258659" id="link-cont" rel="external">
-        <span class="txt-bt-principal" id="txt-bt-principal">Quero fazer uma visita</span>
-      </a>
-  </section>
-  <section class="pt-media" id="pt-media">
-    <section class="mapa" id="mapa">
-      <span class="txt-mapa" id="txt-mapa">Nossa Localização</span>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d973.6818167903194!2d-34.8905814392601!3d-7
-      .959909935648093!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca9e00ab24b90cff!2sInstituto%20Educacional%20Josi
-      val%20Penha!5e0!3m2!1spt-BR!2sbr!4v1608060148378!5m2!1spt-BR!2sbr" frameborder="0" 
-      style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa-in" id="mapa-in"></iframe>
-    </section>
-    <section class="dp" id="dp">
-      <div class="c-dp c-dp-1" id="c-dp c-dp-1">
-        <img src="img/dp/Pais/Fernanda Sales.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
-        <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Fernanda Sales</a>
-        <span class="txt-sub-pais" id="txt-sub-pais">
-          Mãe do <span class="txt-sub-pais-st" id="txt-sub-pais-st">Caio Sales</span>
-        </span>
-        <span class="txt-desc-pais" id="txt-desc-pais1" onmouseover="txtPaHo1()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-        </span>
-        <img src="img/dp/Alunos/Caio Sales.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
-        <span class="txt-tit-alunos" id="txt-tit-alunos">Caio Sales</span>
-        <span class="txt-sub-alunos" id="txt-sub-alunos">
-          Aluno do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 3</span>
-        </span>
-        <span class="txt-desc-alunos" id="txt-desc-alunos1" onmouseover="txtAluHo1()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-        </span>
-      </div>
-      <div class="c-dp c-dp-2" id="c-dp c-dp-2">
-        <img src="img/dp/Pais/Lisandra Carla.png" alt="" class="img-c-dp-pais" id="img-c-dp-pais">
-        <a class="txt-tit-pais" id="txt-tit-pais" href="depoimentos.html">Lisandra Carla</a>
-        <span class="txt-sub-pais" id="txt-sub-pais">
-          Mãe da <span class="txt-sub-pais-st" id="txt-sub-pais-st">Lisa Carla</span>
-        </span>
-        <span class="txt-desc-pais" id="txt-desc-pais2" onmouseover="txtPaHo2()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-        </span>
-        <img src="img/dp/Alunos/Lisa Carla.png" alt="" class="img-c-dp-alunos" id="img-c-dp-alunos">
-        <span class="txt-tit-alunos" id="txt-tit-alunos">Lisa Carla</span>
-        <span class="txt-sub-alunos" id="txt-sub-alunos">
-          Aluna do<span class="txt-sub-alunos-st" id="txt-sub-alunos-st"> Maternal 4</span>
-        </span>
-        <span class="txt-desc-alunos" id="txt-desc-alunos2" onmouseover="txtAluHo2()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.
-        </span>
-      </div>
-      <a href="depoimentos.html" class="bt-dp" id="bt-dp" onmouseover="btDp()" onmouseout="btDp2()">
-        <div class="txt-bt-dp" id="txt-bt-dp">Acompanhe nossa sessão de depoimentos</div>
-      </a>
-    </section>
-  </section>
-  <footer class="pt-baixo" id="pt-baixo">
-    <div class="insta rs" id="insta">
-      <a href="https://www.instagram.com/josival.penha/" rel="external" class="link-insta link-rs" id="link-insta" target="_blank" onmouseout="insta2()">
-        <img src="img/Logos/Logo Instagram.png" alt="Istagram Josival Penha" class="logo-insta logo-rs" id="logo-insta" onmouseover="insta()">
-        <div class="logo-insta-msg logo-msg" id="logo-insta-msg">
-          @josival.penha
+    <div id="preloader">
+        <div class="inner">
+            <div class="bolas">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-      </a>
     </div>
-    <div class="yt rs" id="yt">
-      <a href="https://www.youtube.com/channel/UC-edivYg8jyxiCoBfC9KYdA/about" rel="external" class="link-yt link-rs" id="link-yt" target="_blank" onmouseout="yt2()">
-        <img src="img/Logos/Logo Youtube.png" alt="Youtube Josival Penha" class="logo-yt logo-rs" id="logo-yt" onmouseover="yt()">
-        <div class="logo-yt-msg logo-msg" id="logo-yt-msg">
-          Inst. Educacional Josival Penha
+    <nav class="row navs-top">
+        <nav class="row pre-nav-bar">
+            <ul class="links-pre-nav-bar">
+                <li class="link-pre-nav-bar">
+                    <a href="" class="link-pd">Asd</a>
+                </li>
+                <li class="link-pre-nav-bar">
+                    <a href="" class="link-pd">Asd</a>
+                </li>
+                <li class="link-pre-nav-bar">
+                    <a href="" class="link-pd">Asd</a>
+                </li>
+                <li class="link-pre-nav-bar">
+                    <a href="" class="link-pd-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="link-pre-nav-bar">
+                    <a href="" class="link-pd-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="row nav-bar">
+            <div class="col-6 campo-logo-jp">
+                <img src="img/Logos/Logo Josival Penha.png" alt="Logo Josival Penha" class="logo-jp">
+            </div>
+            <div class="row campo-logo-jp campo-logo-jp-row">
+                <img src="img/Logos/Logo Josival Penha.png" alt="Logo Josival Penha" class="logo-jp">
+            </div>
+            <div class="col-6 campo-btn-ctt-nav-bar">
+                <a target="_blank" rel="external" style="text-decoration: none;" class="btn btn-ctt-nav-bar" id="btn-ctt-nav-bar" onclick="clicksBtnPrin()">Quero fazer uma visita</a>
+            </div>
+        </nav>
+    </nav>
+    <br>
+    <br>
+    <div class="row central">
+        <div class="col-1 central-campo-txt">
+            <div class="row tit-campo-txt">
+                <h1>Matricule-se Agora</h1>
+            </div>
+            <div class="row sub-tit-campo-txt">
+                <p>O Josival Penha utiliza dos mais modernos métodos e conceitos pedagógicos com atividades escolares e extracurriculares durante todo o ano, inseridas de forma gradual e contínua, e conduzidas para estimular e desenvolver nos alunos a criatividade, a formação de um raciocínio lógico, o interesse pelo aprendizado e a construção de valores morais para o convívio social, como responsabilidade, respeito, e cidadania.</p>
+                <p>O nosso processo educativo incentiva a interação entre a teoria e a prática, o pensar e o fazer, entendemos que tanto os educadores como os estudantes podem ensinar e aprender.</p>
+            </div>
         </div>
-      </a>
-    </div>
-    <div class="gg-maps rs" id="gg-maps">
-      <a href="https://goo.gl/maps/dM31qyiR22TeQshZ8" rel="external" class="link-gg-maps link-rs" id="link-gg-maps" target="_blank" onmouseout="ggMaps2()">
-        <img src="img/Logos/Logo Google Maps.png" alt="Google Mapa Josival Penha" class="logo-gg-maps logo-rs" id="logo-gg-maps" onmouseover="ggMaps()">
-        <div class="logo-gg-maps-msg logo-msg" id="logo-gg-maps-msg">
-          Instituto Educacional Josival Penha Av. João Paulo II, 878-880 - Mirueira, Paulista - PE, 53405-190
+        <div class="col-1 central-campo-form">
+            <form action="https://escola-node-js.herokuapp.com/api/site/info/contato" method="POST" id="central-form" class="row">
+                <div class="row campo-tit">
+                    <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
+                </div>
+                <div class="row campos">
+                    <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
+                    <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
+                    <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
+                    <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
+                    <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="email">
+                </div>
+                <button class="btn btn-form">Envie agora</button>
+            </form>
         </div>
-      </a>
-    </div>
-    <div class="whats rs" id="whats">
-      <a href="https://api.whatsapp.com/send?phone=55819949975&text=Boa%20tarde%2C%20gostaria%20de%20falar%20com%20a%20diretora-" rel="external" class="link-whats link-rs" id="link-whats" target="_blank" onmouseout="whats2()">
-        <img src="img/Logos/Logo Whatsapp.png" alt="Whatsapp Josival Penha" class="logo-whats logo-rs" id="logo-whats" onmouseover="whats()">
-        <div class="logo-whats-msg logo-msg" id="logo-whats-msg">
-          (81) 99499-7501
+        <div class="row central-campo-txt central-campo-txt-row">
+            <div class="row tit-campo-txt">
+                <h1>Matricule-se Agora</h1>
+            </div>
+            <div class="row sub-tit-campo-txt">
+                <p>O Josival Penha utiliza dos mais modernos métodos e conceitos pedagógicos com atividades escolares e extracurriculares durante todo o ano, inseridas de forma gradual e contínua, e conduzidas para estimular e desenvolver nos alunos a criatividade, a formação de um raciocínio lógico, o interesse pelo aprendizado e a construção de valores morais para o convívio social, como responsabilidade, respeito, e cidadania.</p>
+            </div>
         </div>
-      </a>
-    </div>
-  </footer>
-  <script>
-      var map = {}
-      onkeydown = onkeyup = function(e){
-        e = e || event
-        map[e.keyCode] = e.type == 'keydown'
-        if(map[18] && map[83]) {
-          window.location.assign('/depoimentos.html')
-        }
-      }
-      function insta2() {
-        var logo = window.document.getElementById('logo-insta-msg')
-        logo.style.visibility = 'hidden'
-      }
-      function insta() {
-        var logo = window.document.getElementById('logo-insta-msg')
-        logo.style.position = 'absolute'
-        logo.style.left = '4vw'
-        logo.style.backgroundColor = 'white'
-        logo.style.border = '0.7vw solid white'
-        logo.style.borderTopLeftRadius = '5vw'
-        logo.style.borderBottomLeftRadius = '5vw'
-        logo.style.borderTopRightRadius = '5vw'
-        logo.style.borderBottomRightRadius = '5vw'
-        logo.style.fontSize = '1.3vw'
-        logo.style.textDecoration = 'none'
-        logo.style.color = '#039DDE'
-        logo.style.visibility = 'visible'
-        logo.style.top = '2.2vw'
-      }
-      function yt2() {
-        var logo = window.document.getElementById('logo-yt-msg')
-        logo.style.visibility = 'hidden'
-      }
-      function yt() {
-        var logo = window.document.getElementById('logo-yt-msg')
-        logo.style.position = 'absolute'
-        logo.style.left = '4vw'
-        logo.style.backgroundColor = 'white'
-        logo.style.border = '0.7vw solid white'
-        logo.style.borderTopLeftRadius = '5vw'
-        logo.style.borderBottomLeftRadius = '5vw'
-        logo.style.borderTopRightRadius = '5vw'
-        logo.style.borderBottomRightRadius = '5vw'
-        logo.style.fontSize = '1.3vw'
-        logo.style.textDecoration = 'none'
-        logo.style.color = '#039DDE'
-        logo.style.visibility = 'visible'
-        logo.style.top = '7.5vw'
-      }
-      function ggMaps() {
-        var logo = window.document.getElementById('logo-gg-maps-msg')
-        logo.style.position = 'absolute'
-        logo.style.left = '4vw'
-        logo.style.backgroundColor = 'white'
-        logo.style.border = '0.7vw solid white'
-        logo.style.borderTopLeftRadius = '5vw'
-        logo.style.borderBottomLeftRadius = '5vw'
-        logo.style.borderTopRightRadius = '5vw'
-        logo.style.borderBottomRightRadius = '5vw'
-        logo.style.fontSize = '1.3vw'
-        logo.style.textDecoration = 'none'
-        logo.style.color = '#039DDE'
-        logo.style.visibility = 'visible'
-        logo.style.top = '12.7vw'
-      }
-      function ggMaps2() {
-        var logo = window.document.getElementById('logo-gg-maps-msg')
-        logo.style.visibility = 'hidden'
-      }
-      function whats2() {
-        var logo = window.document.getElementById('logo-whats-msg')
-        logo.style.visibility = 'hidden'
-      }
-      function whats() {
-        var logo = window.document.getElementById('logo-whats-msg')
-        logo.style.position = 'absolute'
-        logo.style.left = '4vw'
-        logo.style.backgroundColor = 'white'
-        logo.style.border = '0.7vw solid white'
-        logo.style.borderTopLeftRadius = '5vw'
-        logo.style.borderBottomLeftRadius = '5vw'
-        logo.style.borderTopRightRadius = '5vw'
-        logo.style.borderBottomRightRadius = '5vw'
-        logo.style.borderBottomLeftRadius = '5vw'
-        logo.style.fontSize = '1.3vw'
-        logo.style.textDecoration = 'none'
-        logo.style.color = '#039DDE'
-        logo.style.visibility = 'visible'
-        logo.style.top = '17.8vw'
-      }
-      function txtPaHo1() {
-        var txt = window.document.getElementById('txt-desc-pais1')
-        txt.style.transitionDuration = '0.3s'
-        txt.style.transitionTimingFunction = 'linear'
-        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
-      }
-      function txtPaHo2() {
-        var txt = window.document.getElementById('txt-desc-pais2')
-        txt.style.transitionDuration = '0.3s'
-        txt.style.transitionTimingFunction = 'linear'
-        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
-      }
-      function txtAluHo1() {
-        var txt = window.document.getElementById('txt-desc-alunos1')
-        txt.style.transitionDuration = '0.3s'
-        txt.style.transitionTimingFunction = 'linear'
-        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
-      }
-      function txtAluHo2() {
-        var txt = window.document.getElementById('txt-desc-alunos2')
-        txt.style.transitionDuration = '0.3s'
-        txt.style.transitionTimingFunction = 'linear'
-        txt.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo neque corrupti deleniti accusantium qui ipsa exercitationem autem.'
-      }
-      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<=740){
-        var ft_principal = window.document.getElementById('ft-principal')
-        ft_principal.style.width = '200%'
-        var txt_principal_1 = window.document.getElementById('txt-principal1')
-        txt_principal_1.style.fontSize = '6vw'
-        txt_principal_1.style.top = '40vw'
-        var txt_principal_2 = window.document.getElementById('txt-principal2')
-        txt_principal_2.style.fontSize = '5vw'
-        txt_principal_2.style.fontWeight = '400'
-        txt_principal_2.style.top = '50vw'
-        txt_principal_2.innerHTML = 'conheça e entenda a nossa metodologia educacional e descubra porque o Josival Penha é a melhor opção da região para o seu filho!'
-        var link_cont = window.document.getElementById('link-cont')
-        link_cont.style.fontSize = '5vw'
-        link_cont.style.top = '90vw'
-        link_cont.style.fontWeight = '400'
-        var logo_jp_nav = window.document.getElementById('logo-jp-nav')
-        logo_jp_nav.style.height = '20vw'
-        logo_jp_nav.style.width = '70vw'
-        logo_jp_nav.style.marginTop = '3vw'
-        logo_jp_nav.style.marginBottom = '10vw'
-        logo_jp_nav.style.display = 'block'
-        logo_jp_nav.style.marginRight = 'auto'
-        logo_jp_nav.style.marginLeft = 'auto'
-        var tel_link = window.document.getElementById('tel-link')
-        tel_link.style.top = '26vw'
-        tel_link.style.fontSize = '4vw'
-        tel_link.style.left = '20vw'
-        tel_link.style.width = '30vw'
-        tel_link.style.marginLeft = 'auto'
-        tel_link.style.marginRight = 'auto'
-        tel_link.style.marginLeft = '15vw'
-        tel_link.style.top = '23vw'
-        var logo_tel = window.document.getElementById('logo-tel')
-        logo_tel.style.position = 'absolute'
-        logo_tel.style.top = '2vw'
-        logo_tel.style.width = '5vw'
-        logo_tel.style.right = '27vw'
-        var mapa_in = window.document.getElementById('mapa-in')
-        mapa_in.style.top = '100vw'
-        mapa_in.style.width = '70vw'
-        mapa_in.style.height = '60vw'
-        mapa_in.style.marginRight = '3vw'
-        mapa_in.style.marginLeft = '0vw'
-        mapa_in.style.paddingTo = '50vw'
-        mapa_in.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440.0345144466605!2d-34.89052295940143!3d-7.95998115104504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab164c0c708115%3A0xca9e00ab24b90cff!2sInstituto%20Educacional%20Josival%20Penha!5e0!3m2!1spt-BR!2sbr!4v1608121405663!5m2!1spt-BR!2sbr'
-        var mapa = window.document.getElementById('mapa')
-        mapa.style.height = '200vw'
-        var logo_tel_txt = window.document.getElementById('logo-tel-txt')
-        logo_tel_txt.style.width = '50vw'
-        var txt_mapa = window.document.getElementById('txt-mapa')
-        txt_mapa.style.position = 'absolute'
-        txt_mapa.style.top = '94vw'
-        txt_mapa.style.left = '1.3vw'
-        txt_mapa.style.fontSize = '4vw'
-        txt_mapa.style.width = '35vw'
-        var pt_baixo = window.document.getElementById('pt-baixo')
-        pt_baixo.style.position = 'absolute'
-        pt_baixo.style.top = '200vw'
-        pt_baixo.style.paddingLeft = '1vw'
-        var txt_insta = window.document.getElementById('txt-insta')
-        txt_insta.style.position = 'absolute'
-        txt_insta.style.top = '3.5vw'
-        txt_insta.style.fontSize = '5vw'
-        var txt_yt = window.document.getElementById('txt-yt')
-        txt_yt.style.position = 'absolute'
-        txt_yt.style.top = '18.5vw'
-        txt_yt.style.fontSize = '5vw'
-        txt_yt.style.width = '72vw'
-        var txt_gg_maps = window.document.getElementById('txt-gg-maps')
-        txt_gg_maps.style.position = 'absolute'
-        txt_gg_maps.style.top = '31vw'
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-          txt_gg_maps.style.fontSize = '3.9vw'
-          txt_gg_maps.style.width = '84vw'
-        }else{
-          txt_gg_maps.style.fontSize = '3.5vw'
-          txt_gg_maps.style.width = '72.5vw'
-        }
-        txt_gg_maps.innerHTML = 'Instituto Educacional Josival Penha <br> - Avenida João Paulo II - Mirueira, Paulista - PE'
-        var txt_whats = window.document.getElementById('txt-whats')
-        txt_whats.style.position = 'absolute'
-        txt_whats.style.top = '46vw'
-        txt_whats.style.fontSize = '5vw'
-        txt_whats.style.width = '38vw'
-        var logo_insta = window.document.getElementById('logo-insta')
-        logo_insta.style.width = '12vw'
-        var logo_yt = window.document.getElementById('logo-yt')
-        logo_yt.style.width = '12vw'
-        var logo_gg_maps = window.document.getElementById('logo-gg-maps')
-        logo_gg_maps.style.width = '12vw'
-        var logo_whats = window.document.getElementById('logo-whats')
-        logo_whats.style.width = '12vw'
-        var dp = window.document.getElementById('dp')
-        dp.style.position = 'absolute'
-        dp.style.top = '100vw'
-        var logo_tel_txt1 = window.document.getElementById('logo-tel-txt1')
-        logo_tel_txt1.style.position = 'absolute'
-        logo_tel_txt1.style.top = '100vw'
-        var pt_baixo = window.document.getElementById('pt-baixo')
-        pt_baixo.style.bottom = '10vw'
-       }else{
-        var logo_jp_nav = window.document.getElementById('logo-jp-nav')
-        logo_jp_nav.style.marginLeft = '12.3vw'
-        var txt_mapa = window.document.getElementById('txt-mapa')
-        txt_mapa.style.position = 'absolute'
-        txt_mapa.style.fontSize = '1vw'
-        txt_mapa.style.width = '20vw'
-        txt_mapa.style.top = '28vw'
-        txt_mapa.style.left = '2vw'
-      }
-  </script>
+        <div class="row central-campo-form central-campo-form-row">
+            <form action="https://escola-node-js.herokuapp.com/api/site/info/contato" method="POST" id="central-form" class="row">
+                <div class="row campo-tit">
+                    <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
+                </div>
+                <div class="row campos">
+                    <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
+                    <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
+                    <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
+                    <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
+                    <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="email">
+                </div>
+                <button class="btn btn-form">Envie agora</button>
+            </form>
+        </div>
+   </div>
+   <script>
+       const url = window.document.location.search.split('?')[1]
+       if (url) {
+        fetch(`https://escola-node-js.herokuapp.com/api/site/info/links/${url}`)
+       }
+       async function clicksBtnPrin() {
+        fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
+       }
+   </script>
+   <script>
+        //<![CDATA[
+            $(window).on('load', function () {
+                $('#preloader .inner').fadeOut()
+                $('#preloader').delay(350).fadeOut('slow')
+                $('body').delay(350).css({'overflow': 'visible', 'background-color': '#ffffff'})
+            })
+        //]]>
+    </script>
 </body>
 </html>
