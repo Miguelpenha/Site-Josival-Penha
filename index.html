@@ -566,6 +566,9 @@
        $('#central-form').submit(ev => {
             ev.preventDefault()
             fetch('https://escola-node-js.herokuapp.com/api/site/info/contato', {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 method: 'post',
                 body: {
                     redi: String($('#redi').val()),
