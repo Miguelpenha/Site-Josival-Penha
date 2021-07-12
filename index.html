@@ -565,18 +565,8 @@
    <script>
        $('#central-form').submit(ev => {
             ev.preventDefault()
-            fetch('https://escola-node-js.herokuapp.com/api/site/info/contato', {
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                method: 'post',
-                body: {
-                    redi: String($('#redi').val()),
-                    nomeRes: String($('#nomeRes').val()),
-                    nomeCri: String($('#nomeCri').val()),
-                    telefone: String($('#telefone').val()),
-                    email: String($('#email').val())
-                }
+            fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`, {
+                method: 'post'
             })
             console.log('ok')
        })
