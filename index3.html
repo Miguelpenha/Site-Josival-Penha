@@ -267,7 +267,7 @@
             margin-left: 0;
             margin-top: 5.3%;
             background-image: url('img/fotos-jp-1.jpg');
-            background-position: left;
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             padding-bottom: 15%;
@@ -443,6 +443,17 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+                width: 95%;
+            }
+
+            .sub-tit-campo-txt>p {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 10%;
+            }
+
+            .campo-tit h4 {
+                text-align: left;
             }
         }
     </style>
@@ -512,14 +523,14 @@
         <div class="col-1 central-campo-form">
             <form action="https://escola-node-js.herokuapp.com/api/site/info/contato" method="POST" id="central-form" class="row">
                 <div class="row campo-tit">
-                    <h4>Entre em Contato</h4>
+                    <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
                 <div class="row campos">
                     <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
                     <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
                     <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
-                    <input type="tel" placeholder="Número de telefone" class="campo campo-top" id="telefone" name="telefone" required>
-                    <input type="email" placeholder="Endereço de e-mail" class="campo campo-top" id="email" name="email">
+                    <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
+                    <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="email">
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
@@ -530,20 +541,19 @@
             </div>
             <div class="row sub-tit-campo-txt">
                 <p>O Josival Penha utiliza dos mais modernos métodos e conceitos pedagógicos com atividades escolares e extracurriculares durante todo o ano, inseridas de forma gradual e contínua, e conduzidas para estimular e desenvolver nos alunos a criatividade, a formação de um raciocínio lógico, o interesse pelo aprendizado e a construção de valores morais para o convívio social, como responsabilidade, respeito, e cidadania.</p>
-                <p>O nosso processo educativo incentiva a interação entre a teoria e a prática, o pensar e o fazer, entendemos que tanto os educadores como os estudantes podem ensinar e aprender.</p>
             </div>
         </div>
         <div class="row central-campo-form central-campo-form-row">
             <form action="https://escola-node-js.herokuapp.com/api/site/info/contato" method="POST" id="central-form" class="row">
                 <div class="row campo-tit">
-                    <h4>Entre em Contato</h4>
+                    <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
                 <div class="row campos">
                     <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
                     <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
                     <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
-                    <input type="tel" placeholder="Número de telefone" class="campo campo-top" id="telefone" name="telefone" required>
-                    <input type="email" placeholder="Endereço de e-mail" class="campo campo-top" id="email" name="email">
+                    <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
+                    <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="email">
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
