@@ -548,12 +548,12 @@
             </div>
         </div>
         <div class="row central-campo-form central-campo-form-row">
-            <form action="https://escola-node-js.herokuapp.com/api/site/info/contato" method="POST" id="central-form" class="row">
+            <form id="central-form" class="row" onsubmit="enviForm()">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
                 <div class="row campos">
-                    <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
+                    <input type="hidden" name="redi" id="redi" value="https://josivalpenha.site/obrigado.html">
                     <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
                     <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
                     <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
@@ -564,11 +564,23 @@
         </div>
    </div>
    <script>
+       function enviForm() {
+           fetch('https://escola-node-js.herokuapp.com/api/site/info/contato', {
+               body: {
+                   redi: String($('#redi').val()),
+                   nomeRes: String($('#nomeRes').val()),
+                   nomeCri: String($('#nomeCri').val()),
+                   telefone: String($('#telefone').val()),
+                   email: String($('#email').val())
+               }
+           })
+       }
+
        const url = window.document.location.search.split('?')[1]
        if (url) {
         fetch(`https://escola-node-js.herokuapp.com/api/site/info/links/${url}`)
        }
-       async function clicksBtnPrin() {
+       function clicksBtnPrin() {
         fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
        }
    </script>
