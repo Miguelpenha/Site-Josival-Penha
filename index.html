@@ -566,7 +566,6 @@
        $('#central-form').submit(ev => {
             ev.preventDefault()
             fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
-            console.log('ok')
        })
 
        const url = window.document.location.search.split('?')[1]
