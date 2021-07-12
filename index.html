@@ -525,7 +525,7 @@
             </div>
         </div>
         <div class="col-1 central-campo-form">
-            <form id="central-form" class="row" onsubmit="enviForm()">
+            <form id="central-form" class="row">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
@@ -548,7 +548,7 @@
             </div>
         </div>
         <div class="row central-campo-form central-campo-form-row">
-            <form id="central-form" class="row" onsubmit="enviForm()">
+            <form id="central-form" class="row">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
@@ -563,8 +563,9 @@
         </div>
    </div>
    <script>
-       function enviForm() {
-           fetch('https://escola-node-js.herokuapp.com/api/site/info/contato', {
+       $('#central-form').submit(ev => {
+            ev.preventDefault()
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/contato', {
                body: {
                    redi: String($('#redi').val()),
                    nomeRes: String($('#nomeRes').val()),
@@ -572,14 +573,15 @@
                    telefone: String($('#telefone').val()),
                    email: String($('#email').val())
                }
-           })
-           console.log('ok')
-       }
+            })
+            console.log('ok')
+       })
 
        const url = window.document.location.search.split('?')[1]
        if (url) {
         fetch(`https://escola-node-js.herokuapp.com/api/site/info/links/${url}`)
        }
+
        function clicksBtnPrin() {
         fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
        }
