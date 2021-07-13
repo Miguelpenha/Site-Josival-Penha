@@ -298,7 +298,7 @@
         }
 
         .campo-tit h4 {
-            text-align: center;
+            text-align: left;
         }
 
         .campos {
@@ -455,10 +455,25 @@
                 font-weight: 400;
                 margin-bottom: 1%;
             }
+        }
 
-            .campo-tit h4 {
-                text-align: left;
-            }
+        .campo-tit-envi h4 {
+            text-align: center;
+            margin-bottom: 0%;
+            color: #009CDE;
+        }
+
+        .btn-form-envi {
+            margin-top: 5%;
+        }
+
+        .sub-tit-central-form-envi {
+            text-align: center;
+            color: #009CDE;
+        }
+
+        .central-form-envi {
+            display: none;
         }
     </style>
 </head>
@@ -524,8 +539,8 @@
                 <p>O nosso processo educativo incentiva a interação entre a teoria e a prática, o pensar e o fazer, entendemos que tanto os educadores como os estudantes podem ensinar e aprender.</p>
             </div>
         </div>
-        <div class="col-1 central-campo-form">
-            <form id="central-form" class="row">
+        <div class="col-1 central-campo-form central-campo-form-pc">
+            <form id="central-form" class="row central-form-pc">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
@@ -538,6 +553,16 @@
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
+            <br>
+            <br>
+            <br>
+            <div id="central-form" class="row central-form-envi central-form-envi-pc" style="display: none;">
+                <div class="row campo-tit campo-tit-envi">
+                    <h4>Formulário enviado com sucesso! &#x1F601;</h4>
+                    <h6 class="sub-tit-central-form-envi">Entraremos em contato em breve &#x1F44B;</h6>
+                </div>
+                <button class="btn btn-form btn-form-envi-dnv" onclick="clickBtnEnvi()">Envie novamente</button>
+            </div>
         </div>
         <div class="row central-campo-txt central-campo-txt-row">
             <div class="row tit-campo-txt">
@@ -548,7 +573,7 @@
             </div>
         </div>
         <div class="row central-campo-form central-campo-form-row">
-            <form id="central-form" class="row">
+            <form id="central-form" class="row central-form-mobile">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
@@ -560,12 +585,44 @@
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
+            <br>
+            <br>
+            <br>
+            <div id="central-form" class="row central-form-envi central-form-envi-mobile" style="display: none;">
+                <div class="row campo-tit campo-tit-envi">
+                    <h4>Formulário enviado com sucesso! &#x1F601;</h4>
+                    <h6 class="sub-tit-central-form-envi">Entraremos em contato em breve &#x1F44B;</h6>
+                </div>
+                <button class="btn btn-form btn-form-envi" onclick="clickBtnEnvi()">Envie novamente</button>
+            </div>
         </div>
    </div>
    <script>
-       $('#central-form').submit(ev => {
+       function clickBtnEnvi() {
+        window.document.location.reload()
+       }
+
+       $('.central-form-mobile').submit(ev => {
             ev.preventDefault()
             fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
+            setInterval(() => {
+                window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+                window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+                window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+                window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+            }, 1)
+       })
+
+       $('.central-form-pc').submit(ev => {
+            ev.preventDefault()
+            console.log(String($('#nomeCri').val()))
+            fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
+            setInterval(() => {
+                window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+                window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+                window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+                window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+            }, 1)
        })
 
        const url = window.document.location.search.split('?')[1]
