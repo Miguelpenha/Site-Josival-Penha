@@ -615,7 +615,6 @@
 
        $('.central-form-pc').submit(ev => {
             ev.preventDefault()
-            console.log(String($('#nomeCri').val()))
             fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
             setInterval(() => {
                 window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
