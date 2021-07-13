@@ -627,7 +627,7 @@
        $('.central-form-pc').submit(ev => {
             ev.preventDefault()
             if (String($('#email').val()).length == 0) {
-                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('.nomeRes-mobile').val())}/${String($('.nomeCri-mobile').val())}/${String($('.telefone-mobile').val())}/Não informado`)
+                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/Não informado`)
                 setInterval(() => {
                     window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
                     window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
@@ -635,7 +635,7 @@
                     window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
                 }, 1)
             } else {
-                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('.nomeRes-mobile').val())}/${String($('.nomeCri-mobile').val())}/${String($('.telefone-mobile').val())}/${String($('#email').val())}`)
+                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
                 setInterval(() => {
                     window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
                     window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
