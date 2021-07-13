@@ -605,24 +605,44 @@
 
        $('.central-form-mobile').submit(ev => {
             ev.preventDefault()
-            fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
-            setInterval(() => {
-                window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
-                window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
-                window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
-                window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
-            }, 1)
+            if (String($('#email').val()) == '') {
+                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/Não informado`)
+                setInterval(() => {
+                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+                }, 1)
+            } else {
+                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
+                setInterval(() => {
+                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+                }, 1)
+            }
        })
 
        $('.central-form-pc').submit(ev => {
             ev.preventDefault()
-            fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
-            setInterval(() => {
-                window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
-                window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
-                window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
-                window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
-            }, 1)
+            if (String($('#email').val()) == '') {
+                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/Não informado`)
+                setInterval(() => {
+                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+                }, 1)
+            } else {
+                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
+                setInterval(() => {
+                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+                }, 1)
+            }
        })
 
        const url = window.document.location.search.split('?')[1]
