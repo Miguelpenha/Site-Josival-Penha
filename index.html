@@ -523,10 +523,11 @@
                 <img src="img/Logos/Logo Josival Penha.png" alt="Logo Josival Penha" class="logo-jp">
             </div>
             <div class="col-6 campo-btn-ctt-nav-bar">
-                <a target="_blank" rel="external" style="text-decoration: none;" class="btn btn-ctt-nav-bar" id="btn-ctt-nav-bar" onclick="clicksBtnPrin()">Quero fazer uma visita</a>
+                <a href="#form-central" style="text-decoration: none;" class="btn btn-ctt-nav-bar" id="btn-ctt-nav-bar" onclick="clicksBtnPrin()">Quero fazer uma visita</a>
             </div>
         </nav>
     </nav>
+    <div id="form-central"></div>
     <br>
     <br>
     <div class="row central">
@@ -546,7 +547,7 @@
                 </div>
                 <div class="row campos">
                     <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
-                    <input type="text" placeholder="Nome do responsável" class="campo campo-top" id="nomeRes" name="nomeRes" required>
+                    <input type="text" placeholder="Nome do responsável" class="campo campo-top nomeRes-pc" id="nomeRes" name="nomeRes" required>
                     <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
                     <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
                     <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="email">
@@ -628,9 +629,22 @@
        if (url) {
         fetch(`https://escola-node-js.herokuapp.com/api/site/info/links/${url}`)
        }
-
        function clicksBtnPrin() {
-        fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
+            const centralFormPc = window.document.getElementsByClassName('central-form-pc')[0]
+            centralFormPc.style.transitionTimingFunction = 'linear'
+            centralFormPc.style.transitionDuration = '0.1s'
+            centralFormPc.style.border = '2px solid #009CDE'
+            setTimeout(() => {
+                centralFormPc.style.border = 'none'
+            }, 2000)
+            const centralFormMobile = window.document.getElementsByClassName('central-form-mobile')[0]
+            centralFormMobile.style.transitionTimingFunction = 'linear'
+            centralFormMobile.style.transitionDuration = '0.1s'
+            centralFormMobile.style.border = '2px solid #009CDE'
+            setTimeout(() => {
+                centralFormMobile.style.border = 'none'
+            }, 2000)
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
        }
    </script>
    <script>
