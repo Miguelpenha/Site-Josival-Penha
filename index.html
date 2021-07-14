@@ -599,12 +599,14 @@
         </div>
    </div>
    <script>
+       fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/acessos-site')
        function clickBtnEnvi() {
         window.document.location.reload()
        }
 
        $('.central-form-mobile').submit(ev => {
             ev.preventDefault()
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-botao-formulario')
             if (String($('.email-mobile').val()).length == 0) {
                 fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('.nomeRes-mobile').val())}/${String($('.nomeCri-mobile').val())}/${String($('.telefone-mobile').val())}/Não informado`)
                 setInterval(() => {
@@ -626,6 +628,7 @@
 
        $('.central-form-pc').submit(ev => {
             ev.preventDefault()
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-botao-formulario')
             if (String($('#email').val()).length == 0) {
                 fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/Não informado`)
                 setInterval(() => {
@@ -660,7 +663,7 @@
             setTimeout(() => {
                 centralFormMobile.style.border = 'none'
             }, 2000)
-            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/clicksBtnPrin')
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-botao-parte-de-cima')
        }
    </script>
    <script>
