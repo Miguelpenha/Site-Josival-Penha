@@ -645,10 +645,6 @@
             }
        })
 
-       const url = window.document.location.search.split('?')[1]
-       if (url) {
-        fetch(`https://escola-node-js.herokuapp.com/api/site/info/links/${url}`)
-       }
        function clicksBtnPrin() {
             const centralFormPc = window.document.getElementsByClassName('central-form-pc')[0]
             centralFormPc.style.transitionTimingFunction = 'linear'
@@ -664,7 +660,7 @@
             setTimeout(() => {
                 centralFormMobile.style.border = 'none'
             }, 2000)
-            fetch('https://escola-node-js.herokuapp.com/api/site/info/clicksBtnPrin')
+            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/clicksBtnPrin')
        }
    </script>
    <script>
