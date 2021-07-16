@@ -276,7 +276,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            padding-bottom: 15%;
+            padding-bottom: 1%;
         }
 
         .central-campo-txt {
@@ -481,6 +481,77 @@
         .central-form-envi {
             display: none;
         }
+
+        .txt-dps-central {
+            width: 100%;
+            margin-left: 0;
+            background-color: #ffffff;
+            padding-bottom: 7%;
+            padding-top: 7%;
+        }
+
+        .txt-dps-central>h1 {
+            padding-left: 8%;
+            color: #2154C6;
+            font-weight: bold;
+        }
+
+        .txt-dps-central>h1>span {
+            color: #2154C6;
+            font-weight: bold;
+            border-bottom: 3px solid #FF1616;
+        }
+
+        .txt-dps-central p {
+            padding-left: 8%;
+            padding-right: 8%;
+            color: #000000;
+            font-weight: bold;
+            margin-top: 2%;
+            font-size: 22px;
+        }
+
+        .txt-dps-central-2 {
+            width: 100%;
+            margin-left: 0;
+            background-color: #0580B4;
+        }
+
+        .txt-dps-central-2>.periodos {
+            padding-bottom: 5%;
+            padding-top: 5%;
+        }
+
+        .txt-dps-central-2>.periodos>.svg-campo {
+            width: 50%;
+            float: left;
+            padding-top: 2%;
+        }
+
+        .txt-dps-central-2>.periodos>.svg-campo>svg {
+            float: right;
+            margin-top: 2%;
+            margin-right: 3%;
+        }
+
+        .txt-dps-central-2>.periodos>.h1-campo {
+            width: 50%;
+            float: right;
+            padding-top: 2%;
+        }
+
+        .txt-dps-central-2>.tm {
+            padding-left: 7%;
+        }
+
+        .txt-dps-central-2>.tm>ul {
+            margin-top: 12%;
+            font-size: 23px;
+        }
+
+        .txt-dps-central-2>.tm>ul>li>span {
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -588,6 +659,35 @@
                 </div>
                 <button class="btn btn-form btn-form-envi" onclick="clickBtnEnvi()">Envie novamente</button>
             </div>
+        </div>
+   </div>
+   <div class="row txt-dps-central">
+        <h1>
+            <span>EDUCAÇÃO </span>COMPLETA PARA O SEU FILHO
+        </h1>
+        <p>Com uma metodologia focada em projetos, áreas de conhecimento e desenvolvimento de habilidades socioemocionais, sabemos que podemos transformar nossas crianças em suas melhores versões.</p>
+   </div>
+   <div class="row txt-dps-central-2">
+        <div class="col periodos">
+            <div class="col svg-campo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12%" fill="#DB3D3D" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+            </div>
+            <div class="col h1-campo">
+                <h1>PERÍODOS</h1>
+            </div>
+        </div>
+        <div class="col tm">
+            <ul>
+                <li>
+                    <span>MANHÃ: </span>7h30 às 12h00
+                </li>
+                <li>
+                    <span>TARDE: </span>13 às 17h30
+                </li>
+            </ul>
         </div>
    </div>
    <script>
