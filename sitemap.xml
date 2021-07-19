@@ -2,15 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://josivalpenha.site/</loc>
-    <lastmod>2020-12-19</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2020-07-19</lastmod>
+    <changefreq>anual</changefreq>
     <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://josivalpenha.site/obrigado.html</loc>
-    <lastmod>2020-12-16</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0</priority>
   </url>
   <url>
     <loc>https://josivalpenha.site/404.html</loc>
