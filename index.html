@@ -715,6 +715,55 @@
                 font-size: 20px;
             }
         }
+
+        .txt-central-tempos {
+            width: 100%;
+            background-color: #ffffff;
+            padding-bottom: 30%;
+            margin-left: 0;
+        }
+
+        .txt-central-tempos>.campo-btn {
+            width: 100%;
+            margin-left: 0;
+            background-color: red;
+            padding-top: 3%;
+            padding-bottom: 4%;
+        }
+
+        .txt-central-tempos>.campo-btn>.btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            background-color: #2154C6;
+            border-radius: 0;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .txt-central-tempos>.campo-txt-img {
+            width: 100%;
+            margin-left: 0;
+            background-color: aqua;
+            padding-bottom: 25%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .txt-central-tempos>.campo-txt-img>.img {
+            background-color: black;
+            background-image: url('img/20201125_130556.jpg');
+            width: 20%;
+            height: 100px;
+            border-top-right-radius: 50px;
+        }
+
+        .txt-central-tempos>.campo-txt-img>.campo-txt {
+            background-color: lawngreen;
+        }
     </style>
 </head>
 <body>
@@ -874,6 +923,15 @@
                     <span>TARDE: </span>13h10 às 17h10
                 </li>
             </ul>
+        </div>
+   </div>
+   <div class="row txt-central-tempos">
+        <div class="row campo-btn">
+            <button class="btn">AGENDAR VISITA</button>
+        </div>
+        <div class="row campo-txt-img">
+            <div class="col-3 img"></div>
+            <div class="col-9 campo-txt"></div>
         </div>
    </div>
    <script>
