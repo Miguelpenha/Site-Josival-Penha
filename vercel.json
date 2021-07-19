@@ -3,7 +3,23 @@
     "redirects": [
         {
             "source": "/README.md",
-            "destination": "/"
+            "destination": "/404"
+        },
+        {
+            "source": "/robots.txt",
+            "destination": "/404"
+        },
+        {
+            "source": "/LICENSE",
+            "destination": "/404"
+        },
+        {
+            "source": "/.gitattributes",
+            "destination": "/404"
+        },
+        {
+            "source": "/sitemap.xml",
+            "destination": "/404"
         }
     ]
 }
