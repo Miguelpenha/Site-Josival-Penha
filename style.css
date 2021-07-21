@@ -655,7 +655,7 @@ textarea {
 @media screen and (max-width: 1050px) {
     .campo-txt-img>.campo-txt>p {
         width: 99%;
-        font-size: 23px;
+        font-size: 17px;
         margin-left: 2%;
         margin-bottom: 2%;
     }
@@ -680,7 +680,7 @@ textarea {
 
     .campo-txt-img>.campo-svg-txt>svg {
         margin: 0;
-        width: 100px;
+        width: 130px;
         margin-top: 5%;
         display: block;
         margin-left: auto;
@@ -707,7 +707,7 @@ textarea {
 
 @media screen and (max-width: 420px) {
     .campo-txt-img>.campo-txt>h1 {
-        font-size: 28px;
+        font-size: 20px;
     }
 }
 
@@ -745,20 +745,20 @@ textarea {
 .ensino>.infa>.campo-svg-txt-infa {
     background-color: #CDE2EB;
     margin-top: 5%;
-    width: 75%;
+    width: 65%;
     border-radius: 15px;
     float: right;
     margin-right: 10%;
 }
 
-.ensino>.infa>.campo-svg-txt-infa>svg {
+.ensino>.infa>.campo-svg-txt-infa>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 30%;
     height: 30%;
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa {
@@ -788,25 +788,25 @@ textarea {
 .ensino>.funda>.campo-svg-txt-funda {
     background-color: #CDE2EB;
     margin-top: 5%;
-    width: 75%;
+    width: 65%;
     border-radius: 15px;
     float: left;
     margin-left: 10%;
 }
 
-.ensino>.funda>.campo-svg-txt-funda>svg {
+.ensino>.funda>.campo-svg-txt-funda>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 30%;
     height: 30%;
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda {
     margin-left: 0;
-    padding-bottom: 5%;
+    padding-bottom: 11.5%;
 }
 
 .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>h1 {
