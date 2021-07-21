@@ -718,6 +718,7 @@
             width: fit-content;
             padding: 0.5%;
             font-size: 33px;
+            text-align: center;
         }
 
         .txt-central-tempos>.campo-txt-img>.campo-txt>p {
@@ -740,73 +741,55 @@
 
         @media screen and (max-width: 1050px) {
             .txt-central-tempos>.campo-txt-img>.campo-txt>p {
-                width: 100%;
+                width: 99%;
                 font-size: 23px;
                 margin-left: 2%;
+                margin-bottom: 2%;
             }
         }
 
-        @media screen and (max-width: 735px) {
+        @media screen and (max-width: 740px) {
+            .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
+                margin-top: 60%;
+            }
+        }
+
+        @media screen and (max-width: 718px) {
+            .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
+                margin-top: 85%;
+            }
+        }
+
+        @media screen and (max-width: 651px) {
+            .txt-central-tempos>.campo-txt-img>.campo-svg-txt {
+                margin-left: 0;
+            }
+
+            .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
+                margin: 0;
+                width: 100px;
+                margin-top: 5%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .txt-central-tempos>.campo-txt-img>.campo-txt {
+                margin-left: 0;
+            }
+
+            .txt-central-tempos>.campo-txt-img>.campo-txt>p {
+                padding-left: 0;
+            }
+
+            .txt-central-tempos>.campo-txt-img>.campo-txt>h1 {
+                padding-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
             .txt-central-tempos>.campo-txt-img>.campo-txt>h1 {
                 font-size: 28px;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>p {
-                font-size: 20px;
-            }
-        }
-
-        @media screen and (max-width: 650px) {
-            .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
-                width: 80px;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>h1 {
-                font-size: 23px;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>p {
-                font-size: 16px;
-            }
-        }
-
-        @media screen and (max-width: 540px) {
-            .txt-central-tempos>.campo-txt-img>.campo-svg-txt {
-                width: 14.6%;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
-                width: 60px;
-                padding-left: 0%;
-            }
-            
-            .txt-central-tempos>.campo-txt-img>.campo-txt {
-                width: 85.4%;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>h1 {
-                margin-left: 0;
-                font-size: 20px;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>p {
-                margin-left: 0;
-                font-size: 14px;
-            }
-        }
-
-        @media screen and (max-width: 485px) {
-            .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
-                width: 40px;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>h1 {
-                font-size: 16px;
-            }
-
-            .txt-central-tempos>.campo-txt-img>.campo-txt>p {
-                font-size: 13px;
-                line-height: 20px;
             }
         }
     </style>
@@ -1003,6 +986,15 @@
         </button>
     </div>
    <script>
+       setInterval(() => {
+           if (window.innerWidth <= 650) {
+               window.document.getElementsByClassName('campo-svg-txt')[0].className = 'row campo-svg-txt'
+               window.document.getElementsByClassName('campo-txt')[0].className = 'row campo-txt'
+           } else {
+                window.document.getElementsByClassName('campo-svg-txt')[0].className = 'col-2 campo-svg-txt'
+                window.document.getElementsByClassName('campo-txt')[0].className = 'col-10 campo-txt'
+           }
+       }, 1);
        fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/acessos-site')
        function clickBtnEnvi() {
         window.document.location.reload()
