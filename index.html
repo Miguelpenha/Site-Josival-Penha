@@ -52,6 +52,10 @@
             color: #ffffff;
         }
 
+        body {
+            padding-top: 0px;
+        }
+
         .link-pd {
             transition-timing-function: linear;
             transition-duration: 0.1s;
@@ -72,6 +76,7 @@
             width: 100%;
             margin-left: 0;
             position: fixed;
+            z-index: 100;
         }
 
         .pre-nav-bar {
@@ -452,7 +457,7 @@
         .txt-dps-central-2 {
             width: 100%;
             margin-left: 0;
-            background-color: #0580B4;
+            background-color: #CDE2EB;
         }
 
         .txt-dps-central-2>.periodos {
@@ -656,7 +661,6 @@
         .txt-central-tempos {
             width: 100%;
             background-color: #ffffff;
-            padding-bottom: 30%;
             margin-left: 0;
         }
 
@@ -684,7 +688,6 @@
         .txt-central-tempos>.campo-txt-img {
             width: 100%;
             margin-left: 0;
-            padding-bottom: 25%;
             padding-left: 0;
             padding-right: 0;
         }
@@ -696,8 +699,8 @@
         .txt-central-tempos>.campo-txt-img>.campo-svg-txt>svg {
             width: 100px;
             fill: #ffffff;
-            margin-top: 40%;
-            margin-bottom: 40%;
+            margin-top: 50%;
+            margin-bottom: 50%;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -705,7 +708,7 @@
 
         .txt-central-tempos>.campo-txt-img>.campo-txt {
             background-color: #27AAE1;
-            padding-top: 2%;
+            padding-top: 3%;
         }
 
         .txt-central-tempos>.campo-txt-img>.campo-txt>h1 {
@@ -720,6 +723,17 @@
             margin-left: 2%;
             width: 75%;
             font-size: 25px;
+        }
+
+        .carousel {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5%;
+        }
+
+        .carousel>.carousel-inner {
+            padding: 0;
         }
     </style>
 </head>
@@ -830,22 +844,22 @@
    <div class="row txt-dps-central-2">
         <div class="col periodos">
             <div class="col svg-campo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12%" fill="#dbd934" class="bi bi-clock" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12%" fill="#D60000" class="bi bi-clock" viewBox="0 0 16 16">
                     <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                 </svg>
             </div>
             <div class="col h1-campo">
-                <h1>PERÍODOS</h1>
+                <h1 style="color: #2154C6;">PERÍODOS</h1>
             </div>
         </div>
         <div class="col tm">
             <ul>
-                <li>
-                    <span>MANHÃ: </span>7h10 às 11h10
+                <li style="color: #2154C6;">
+                    <span style="color: #2154C6;">MANHÃ: </span>7h10 às 11h10
                 </li>
-                <li>
-                    <span>TARDE: </span>13h10 às 17h10
+                <li style="color: #2154C6;">
+                    <span style="color: #2154C6;">TARDE: </span>13h10 às 17h10
                 </li>
             </ul>
         </div>
@@ -890,6 +904,30 @@
             </div>
         </div>
    </div>
+   <div id="carouselExampleControls" class="carousel slide row" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="img/20210525_111024 (2).jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/IMG_20191119_155137433_BURST000_COVER_TOP (1).jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/66 (1).png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/20210212_092304 (1).jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
    <script>
        fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/acessos-site')
        function clickBtnEnvi() {
