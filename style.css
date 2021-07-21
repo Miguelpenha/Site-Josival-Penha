@@ -804,7 +804,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 80%;
+    width: 95%;
     color: #000000;
     font-weight: 600;
 }
@@ -834,7 +834,7 @@ textarea {
 
 .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda {
     margin-left: 0;
-    padding-bottom: 11.5%;
+    padding-bottom: 5%;
 }
 
 .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>h1 {
@@ -847,7 +847,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 80%;
+    width: 95%;
     color: #000000;
     font-weight: 600;
 }
