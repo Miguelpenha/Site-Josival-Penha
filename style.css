@@ -773,10 +773,11 @@ textarea {
 .ensino>.infa>.campo-svg-txt-infa {
     background-color: #CDE2EB;
     margin-top: 5%;
-    width: 65%;
+    width: 500px;
     border-radius: 15px;
     float: right;
     margin-right: 10%;
+    padding: 3%;
 }
 
 .ensino>.infa>.campo-svg-txt-infa>img {
@@ -816,10 +817,11 @@ textarea {
 .ensino>.funda>.campo-svg-txt-funda {
     background-color: #CDE2EB;
     margin-top: 5%;
-    width: 65%;
+    width: 500px;
     border-radius: 15px;
     float: left;
     margin-left: 10%;
+    padding: 3%;
 }
 
 .ensino>.funda>.campo-svg-txt-funda>img {
@@ -850,4 +852,63 @@ textarea {
     width: 95%;
     color: #000000;
     font-weight: 600;
+}
+
+@media screen and (max-width: 1190px) {
+    .ensino>.funda>.campo-svg-txt-funda {
+        margin-left: 1%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        margin-right: 1%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 400px;
+        margin-left: 5%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 400px;
+        margin-right: 5%;
+        padding-bottom: 13%;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 350px;
+        padding-bottom: 7%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 350px;
+        padding-bottom: 0%;
+    }
+}
+
+@media screen and (max-width: 791px) {
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 350px;
+        padding-bottom: 0%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 350px;
+        padding-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 300px;
+        padding-bottom: 7%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 300px;
+        padding-bottom: 0%;
+    }
 }
