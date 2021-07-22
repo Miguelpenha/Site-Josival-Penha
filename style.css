@@ -904,11 +904,85 @@ textarea {
 @media screen and (max-width: 776px) {
     .ensino>.funda>.campo-svg-txt-funda {
         width: 300px;
-        padding-bottom: 7%;
+        padding-bottom: 8.5%;
     }
 
     .ensino>.infa>.campo-svg-txt-infa {
         width: 300px;
         padding-bottom: 0%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .ensino>.funda {
+        padding-left: 0%;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 280px;
+        padding-bottom: 0%;
+        margin-left: 4%;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>p {
+        font-size: 16px;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>h1 {
+        font-size: 25px;
+    }
+
+    .ensino>.infa {
+        padding-right: 0%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 280px;
+        padding-bottom: 0%;
+        margin-right: 4%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>p {
+        font-size: 16px;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .ensino>.funda {
+        padding-left: 0.3%;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 250px;
+        padding-bottom: 0%;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>p {
+        font-size: 16px;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>h1 {
+        font-size: 25px;
+    }
+
+    .ensino>.infa {
+        padding-right: 0.3%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 250px;
+        padding-bottom: 0%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>p {
+        font-size: 16px;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>h1 {
+        font-size: 25px;
     }
 }
